@@ -62,7 +62,7 @@ final class ProductFaqTab implements HasHooks
             <?php wp_nonce_field(self::NONCE_ACTION, self::NONCE_FIELD); ?>
             <div class="options_group">
                 <p class="answers-product-panel__intro">
-                    <?php esc_html_e('Add questions buyers ask before purchase. They render as an accessible accordion on the product page and can feed FAQ rich results.', 'answers'); ?>
+                    <?php esc_html_e('Add questions buyers ask before purchase. They render as an accessible accordion on the product page.', 'answers'); ?>
                 </p>
                 <?php FaqRepeater::render($items, 'answers_faqs'); ?>
             </div>
@@ -113,9 +113,9 @@ final class ProductFaqTab implements HasHooks
     }
 
     /**
-     * Shared enqueue for the repeater CSS/JS (also used by the FAQ-set editor).
+     * Enqueue the repeater CSS/JS for the product FAQ editor.
      */
-    public static function enqueueRepeaterAssets(): void
+    private function enqueueRepeaterAssets(): void
     {
         wp_enqueue_style(
             'answers-admin',

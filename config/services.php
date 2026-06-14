@@ -9,7 +9,6 @@
 
 declare(strict_types=1);
 
-use Answers\Admin\GlobalFaqSets;
 use Answers\Admin\ProductFaqTab;
 use Answers\Admin\Settings;
 use Answers\Container;
@@ -24,16 +23,11 @@ return static function (Container $c): void {
 
     $c->singleton(FaqRepository::class, static fn (): FaqRepository => new FaqRepository());
 
-    // Front-end renderer (accordion + schema).
+    // Front-end renderer (accordion).
     $c->singleton(
         FaqRenderer::class,
         static fn (Container $c): FaqRenderer => new FaqRenderer($c->get(FaqRepository::class)),
     );
-
-    // GlobalFaqSets registers the FAQ-set post type in every context (the
-    // storefront needs it registered to resolve assigned sets); its editor
-    // hooks are admin-gated inside registerHooks().
-    $c->singleton(GlobalFaqSets::class, static fn (): GlobalFaqSets => new GlobalFaqSets());
 
     if (is_admin()) {
         $c->singleton(

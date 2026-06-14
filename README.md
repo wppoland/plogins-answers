@@ -7,29 +7,24 @@ the product page — which lifts conversions and cuts support tickets.
 ## Features
 
 - Per-product FAQ items via a "FAQs" tab in the Product data panel.
-- Reusable global FAQ sets assignable to products and categories, merged and de-duplicated with
-  per-product items.
 - Accessible accordion: real buttons with `aria-expanded`, keyboard operable, focus-visible and
   motion-reduced friendly, with no layout shift.
-- Placement control: a product-information tab or after the product summary.
-- Optional FAQPage schema.org JSON-LD output.
-- An `[answers_faqs]` shortcode to render a product's FAQs anywhere.
+- Renders in a dedicated "FAQs" product-information tab, with a configurable tab label.
 
 ## Installation
 
 1. Upload the plugin to `/wp-content/plugins/answers`, or install it via Plugins → Add New.
 2. Activate it. WooCommerce must be active.
-3. Edit a product and open the FAQs tab to add questions, or create reusable sets under FAQ Sets.
-4. Tune placement and structured data under WooCommerce → Answers.
+3. Edit a product and open the FAQs tab to add questions.
+4. Rename the FAQ tab under WooCommerce → Answers if you like.
 
 ## Frequently Asked Questions
 
 **Does it require WooCommerce?**
 Yes. WooCommerce must be installed and active.
 
-**Can I reuse the same FAQs across many products?**
-Yes. Create a FAQ Set and assign it to specific products or whole product categories. Its items are
-merged with each product's own FAQs.
+**Where do FAQs appear?**
+In a dedicated "FAQs" product-information tab on the single product page.
 
 Built by WPPoland — https://plogins.com
 

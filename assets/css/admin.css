@@ -1,20 +1,16 @@
 /**
- * Answers — admin styling for the settings screen, the product FAQ repeater and
- * the FAQ-set editor. Tokens live under --answers-a-* so the look is tunable in
- * one place. Transitions are gated behind prefers-reduced-motion and colours
+ * Answers — admin styling for the settings screen and the product FAQ repeater.
+ * Tokens live under --answers-a-* so the look is tunable in one place. Colours
  * adapt to the admin colour scheme via prefers-color-scheme.
  */
 
 .answers-admin {
 	--answers-a-accent: #2271b1;
 	--answers-a-radius: 10px;
-	--answers-a-radius-sm: 6px;
 	--answers-a-gap: clamp(1rem, 2vw, 1.5rem);
 	--answers-a-card-bg: #fff;
 	--answers-a-card-border: #dcdcde;
 	--answers-a-muted: #646970;
-	--answers-a-help-bg: #2c3338;
-	--answers-a-help-fg: #fff;
 
 	max-inline-size: 840px;
 }
@@ -58,56 +54,7 @@
 	margin-block-start: 0;
 }
 
-/* Inline help affordance. */
-.answers-help {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	inline-size: 18px;
-	block-size: 18px;
-	margin-inline-start: 6px;
-	padding: 0;
-	border: 0;
-	border-radius: 50%;
-	background: var(--answers-a-accent);
-	color: #fff;
-	font-size: 11px;
-	font-weight: 700;
-	line-height: 1;
-	cursor: help;
-	vertical-align: middle;
-	transition: transform 0.12s ease;
-}
-
-.answers-help:hover {
-	transform: scale( 1.1 );
-}
-
-.answers-help:focus-visible {
-	outline: 2px solid var(--answers-a-accent);
-	outline-offset: 2px;
-}
-
-.answers-tip {
-	max-inline-size: 320px;
-	margin: 0;
-	padding: 0.6rem 0.75rem;
-	border: 0;
-	border-radius: var(--answers-a-radius-sm);
-	background: var(--answers-a-help-bg);
-	color: var(--answers-a-help-fg);
-	font-size: 12.5px;
-	line-height: 1.5;
-	box-shadow: 0 6px 24px rgba( 0, 0, 0, 0.25 );
-}
-
-/* Fallback positioning for browsers without the Popover API. */
-.answers-tip:not( [popover] ) {
-	position: absolute;
-	z-index: 100;
-}
-
-/* Repeater (product FAQ tab + FAQ-set editor). */
+/* Repeater (product FAQ tab). */
 .answers-repeater__rows {
 	display: flex;
 	flex-direction: column;
@@ -165,36 +112,9 @@
 	margin-block-start: 0.5rem;
 }
 
-/* Assignment metabox. */
-.answers-assignment__field {
-	margin-block-end: 1rem;
-}
-
-.answers-assignment__checklist {
-	display: block;
-	max-block-size: 180px;
-	margin-block: 4px;
-	padding: 6px 8px;
-	overflow-y: auto;
-	border: 1px solid #dcdcde;
-	border-radius: 6px;
-	background: #fff;
-}
-
-.answers-assignment__check {
-	display: block;
-	margin-block: 2px;
-}
-
 .answers-product-panel__intro {
 	margin-block: 0 0.75rem !important;
 	color: var(--answers-a-muted, #646970);
-}
-
-@media ( prefers-reduced-motion: reduce ) {
-	.answers-help {
-		transition: none;
-	}
 }
 
 @media ( prefers-color-scheme: dark ) {

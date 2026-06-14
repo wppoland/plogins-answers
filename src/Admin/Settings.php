@@ -11,22 +11,15 @@ defined('ABSPATH') || exit;
 /**
  * Settings screen registered as a WooCommerce submenu ("WooCommerce → Answers").
  *
- * Stores settings in the `answers_settings` option (array): placement (tab or
- * after-summary), the tab title / heading overrides, whether the first item
- * starts open, and whether to emit FAQPage schema.org JSON-LD. All output is
- * escaped; all input is sanitised and constrained on save. The save capability
- * is aligned to manage_woocommerce so shop managers can edit it.
+ * Stores settings in the `answers_settings` option (array): whether FAQs are
+ * shown on the storefront and the label of the FAQ tab. All output is escaped;
+ * all input is sanitised on save. The save capability is aligned to
+ * manage_woocommerce so shop managers can edit it.
  */
 final class Settings implements HasHooks
 {
     private const OPTION = 'answers_settings';
     private const PAGE   = 'answers-settings';
-
-    /** Allowed placement keys. */
-    private const PLACEMENTS = ['tab', 'summary'];
-
-    /** Incremented to give each inline-help control a unique id/anchor. */
-    private int $helpSeq = 0;
 
     public function registerHooks(): void
     {
@@ -46,14 +39,6 @@ final class Settings implements HasHooks
             ANSWERS_URL . 'assets/css/admin.css',
             [],
             \Answers\VERSION,
-        );
-
-        wp_enqueue_script(
-            'answers-admin',
-            ANSWERS_URL . 'assets/js/admin.js',
-            [],
-            \Answers\VERSION,
-            ['in_footer' => true, 'strategy' => 'defer'],
         );
     }
 
@@ -101,7 +86,7 @@ final class Settings implements HasHooks
                 <div>
                     <h2><?php esc_html_e('Answer buyer questions, right on the product page', 'answers'); ?></h2>
                     <p>
-                        <?php esc_html_e('Add FAQs to a product in its "FAQs" data tab, or build reusable FAQ sets and assign them to products and categories. They render as an accessible, keyboard-friendly accordion — and can emit FAQ rich-result structured data.', 'answers'); ?>
+                        <?php esc_html_e('Add FAQs to a product in its "FAQs" data tab. They render as an accessible, keyboard-friendly accordion in a "FAQs" tab on the product page.', 'answers'); ?>
                     </p>
                 </div>
             </div>
@@ -114,10 +99,7 @@ final class Settings implements HasHooks
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
-                                <th scope="row">
-                                    <?php esc_html_e('Enable FAQs', 'answers'); ?>
-                                    <?php $this->help(__('The master switch. When off, no FAQs render on the storefront and the FAQ stylesheet is not loaded — zero front-end impact.', 'answers')); ?>
-                                </th>
+                                <th scope="row"><?php esc_html_e('Enable FAQs', 'answers'); ?></th>
                                 <td>
                                     <label for="answers_enabled">
                                         <input
@@ -129,34 +111,12 @@ final class Settings implements HasHooks
                                         />
                                         <?php esc_html_e('Show product FAQs on the storefront.', 'answers'); ?>
                                     </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <label for="answers_placement"><?php esc_html_e('Placement', 'answers'); ?></label>
-                                    <?php $this->help(__('Choose a dedicated "FAQs" product-information tab, or render the accordion directly after the product summary (near the add-to-cart area).', 'answers')); ?>
-                                </th>
-                                <td>
-                                    <select id="answers_placement" name="<?php echo esc_attr(self::OPTION); ?>[placement]">
-                                        <?php
-                                        $current      = (string) ($settings['placement'] ?? 'tab');
-                                        $placeLabels  = [
-                                            'tab'     => __('Product information tab', 'answers'),
-                                            'summary' => __('After the product summary', 'answers'),
-                                        ];
-                                        foreach (self::PLACEMENTS as $placement) :
-                                            ?>
-                                            <option value="<?php echo esc_attr($placement); ?>" <?php selected($current, $placement); ?>>
-                                                <?php echo esc_html($placeLabels[$placement] ?? $placement); ?>
-                                            </option>
-                                        <?php endforeach; ?>
-                                    </select>
+                                    <p class="description"><?php esc_html_e('When off, no FAQs render and the FAQ stylesheet is not loaded.', 'answers'); ?></p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">
                                     <label for="answers_tab_title"><?php esc_html_e('Tab title', 'answers'); ?></label>
-                                    <?php $this->help(__('The label of the FAQ tab. Leave blank to use the default "FAQs". Only used with the tab placement.', 'answers')); ?>
                                 </th>
                                 <td>
                                     <input
@@ -167,79 +127,11 @@ final class Settings implements HasHooks
                                         class="regular-text"
                                         placeholder="<?php esc_attr_e('FAQs', 'answers'); ?>"
                                     />
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <label for="answers_heading"><?php esc_html_e('Heading', 'answers'); ?></label>
-                                    <?php $this->help(__('The heading shown above the accordion when rendered after the summary. Leave blank for the default "Frequently asked questions".', 'answers')); ?>
-                                </th>
-                                <td>
-                                    <input
-                                        type="text"
-                                        id="answers_heading"
-                                        name="<?php echo esc_attr(self::OPTION); ?>[heading]"
-                                        value="<?php echo esc_attr((string) ($settings['heading'] ?? '')); ?>"
-                                        class="regular-text"
-                                        placeholder="<?php esc_attr_e('Frequently asked questions', 'answers'); ?>"
-                                    />
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <?php esc_html_e('First item open', 'answers'); ?>
-                                    <?php $this->help(__('Start the accordion with its first question already expanded. Off keeps every item collapsed until clicked.', 'answers')); ?>
-                                </th>
-                                <td>
-                                    <label for="answers_first_open">
-                                        <input
-                                            type="checkbox"
-                                            id="answers_first_open"
-                                            name="<?php echo esc_attr(self::OPTION); ?>[first_open]"
-                                            value="1"
-                                            <?php checked((bool) ($settings['first_open'] ?? false), true); ?>
-                                        />
-                                        <?php esc_html_e('Expand the first question by default.', 'answers'); ?>
-                                    </label>
+                                    <p class="description"><?php esc_html_e('The label of the FAQ tab on the product page. Leave blank to use "FAQs".', 'answers'); ?></p>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
-
-                <div class="answers-card">
-                    <h2><?php esc_html_e('Search engine results', 'answers'); ?></h2>
-                    <table class="form-table" role="presentation">
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <?php esc_html_e('FAQ structured data', 'answers'); ?>
-                                    <?php $this->help(__('Outputs FAQPage schema.org JSON-LD for products that have FAQs, helping search engines understand your questions and answers. Only enable if these FAQs are genuinely visible on the page.', 'answers')); ?>
-                                </th>
-                                <td>
-                                    <label for="answers_output_schema">
-                                        <input
-                                            type="checkbox"
-                                            id="answers_output_schema"
-                                            name="<?php echo esc_attr(self::OPTION); ?>[output_schema]"
-                                            value="1"
-                                            <?php checked((bool) ($settings['output_schema'] ?? false), true); ?>
-                                        />
-                                        <?php esc_html_e('Emit FAQPage JSON-LD structured data.', 'answers'); ?>
-                                    </label>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="description">
-                        <?php
-                        printf(
-                            /* translators: %s: shortcode wrapped in <code>. */
-                            esc_html__('Need FAQs somewhere else on the product page? Drop %s into a block or template to render the current product\'s FAQs.', 'answers'),
-                            '<code>[answers_faqs]</code>',
-                        );
-                        ?>
-                    </p>
                 </div>
 
                 <?php submit_button(); ?>
@@ -249,29 +141,7 @@ final class Settings implements HasHooks
     }
 
     /**
-     * Render an accessible inline-help affordance using the native Popover API,
-     * also wired via aria-describedby; the bundled script provides a fallback.
-     */
-    private function help(string $text): void
-    {
-        $id = 'answers-help-' . (++$this->helpSeq);
-        ?>
-        <button
-            type="button"
-            class="answers-help"
-            aria-label="<?php esc_attr_e('More information', 'answers'); ?>"
-            aria-describedby="<?php echo esc_attr($id); ?>"
-            aria-expanded="false"
-            popovertarget="<?php echo esc_attr($id); ?>"
-        >?</button>
-        <div id="<?php echo esc_attr($id); ?>" class="answers-tip" role="tooltip" popover hidden>
-            <?php echo esc_html($text); ?>
-        </div>
-        <?php
-    }
-
-    /**
-     * Sanitise and constrain the submitted settings before save.
+     * Sanitise the submitted settings before save.
      *
      * @param mixed $raw
      * @return array<string, mixed>
@@ -282,22 +152,10 @@ final class Settings implements HasHooks
             $raw = [];
         }
 
-        $placement = isset($raw['placement']) ? sanitize_key((string) $raw['placement']) : 'tab';
-
-        if (! in_array($placement, self::PLACEMENTS, true)) {
-            $placement = 'tab';
-        }
-
-        $sanitized = [
-            'enabled'       => ! empty($raw['enabled']),
-            'placement'     => $placement,
-            'tab_title'     => isset($raw['tab_title']) ? sanitize_text_field((string) $raw['tab_title']) : '',
-            'heading'       => isset($raw['heading']) ? sanitize_text_field((string) $raw['heading']) : '',
-            'first_open'    => ! empty($raw['first_open']),
-            'output_schema' => ! empty($raw['output_schema']),
+        return [
+            'enabled'   => ! empty($raw['enabled']),
+            'tab_title' => isset($raw['tab_title']) ? sanitize_text_field((string) $raw['tab_title']) : '',
         ];
-
-        return (array) apply_filters('answers/sanitize_settings', $sanitized, $raw);
     }
 
     /**

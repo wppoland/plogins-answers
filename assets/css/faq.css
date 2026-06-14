@@ -21,12 +21,6 @@
 	color: var(--answers-fg);
 }
 
-.answers-faq__heading {
-	margin: 0 0 1rem;
-	font-size: 1.4rem;
-	line-height: 1.2;
-}
-
 .answers-faq__list {
 	display: flex;
 	flex-direction: column;

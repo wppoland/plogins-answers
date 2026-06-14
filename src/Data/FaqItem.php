@@ -20,12 +20,4 @@ final class FaqItem
         public readonly string $answer,
     ) {
     }
-
-    /**
-     * Plain-text answer for schema output (strips tags, collapses whitespace).
-     */
-    public function plainAnswer(): string
-    {
-        return trim((string) preg_replace('/\s+/', ' ', wp_strip_all_tags($this->answer)));
-    }
 }

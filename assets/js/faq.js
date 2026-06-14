@@ -85,19 +85,6 @@
 				open( button, panel );
 			}
 		} );
-
-		// Sync any server-rendered "first item open" panels with the animated class.
-		if ( ! reduceMotion ) {
-			root.querySelectorAll(
-				'.answers-faq__trigger[aria-expanded="true"]'
-			).forEach( function ( button ) {
-				var panel = panelFor( button );
-				if ( panel ) {
-					panel.classList.add( 'is-open' );
-					panel.style.blockSize = 'auto';
-				}
-			} );
-		}
 	}
 
 	document
