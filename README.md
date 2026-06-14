@@ -1,47 +1,36 @@
-# Answers — Product FAQs for WooCommerce
+# Answers - Product FAQs for WooCommerce
 
-Add per-product FAQs as an accessible accordion to reduce pre-sale questions.
-
-Answers is a **self-contained** WooCommerce plugin (no external runtime
-dependencies) that lets merchants attach a frequently-asked-questions section to
-products and render it as an accessible, keyboard-operable accordion — optionally
-with FAQPage schema.org structured data.
+Answers lets you add a frequently-asked-questions section to your WooCommerce products and render it
+as an accessible, keyboard-operable accordion. Buyers get their pre-sale questions answered right on
+the product page — which lifts conversions and cuts support tickets.
 
 ## Features
 
 - Per-product FAQ items via a "FAQs" tab in the Product data panel.
-- Reusable global FAQ sets (a private `answers_faq_set` post type) assignable to
-  products and product categories; merged and de-duplicated with per-product items.
-- Accessible accordion: `<button aria-expanded aria-controls>` + `role="region"`,
-  keyboard operable, focus-visible, motion-reduced friendly, no layout shift.
-- Placement: a product-information tab or after the product summary.
-- Optional FAQPage schema.org JSON-LD.
-- `[answers_faqs]` shortcode.
-- Answer HTML filtered with `wp_kses_post`; all input sanitised, all output escaped.
+- Reusable global FAQ sets assignable to products and categories, merged and de-duplicated with
+  per-product items.
+- Accessible accordion: real buttons with `aria-expanded`, keyboard operable, focus-visible and
+  motion-reduced friendly, with no layout shift.
+- Placement control: a product-information tab or after the product summary.
+- Optional FAQPage schema.org JSON-LD output.
+- An `[answers_faqs]` shortcode to render a product's FAQs anywhere.
 
-## Architecture
+## Installation
 
-- `answers.php` — bootstrap. Boots on `init:0` and fires `answers/booted`.
-- `src/Plugin.php`, `src/Container.php` — DI container + boot pipeline.
-- `src/Data/FaqRepository.php` — resolves per-product + global-set FAQs.
-- `src/Service/FaqRenderer.php` — front-end accordion + JSON-LD.
-- `src/Admin/` — product FAQ tab, FAQ-set editor, settings, shared repeater.
-- `config/` — `services.php`, `hooks.php`, `defaults.php`.
+1. Upload the plugin to `/wp-content/plugins/answers`, or install it via Plugins → Add New.
+2. Activate it. WooCommerce must be active.
+3. Edit a product and open the FAQs tab to add questions, or create reusable sets under FAQ Sets.
+4. Tune placement and structured data under WooCommerce → Answers.
 
-## Extension points
+## Frequently Asked Questions
 
-- `answers/booted` — fires after boot with the `Plugin` instance (PRO hooks here).
-- `answers/product_faqs` — filter the resolved `FaqItem[]` for a product.
-- `answers/sanitize_settings` — filter sanitised settings on save.
+**Does it require WooCommerce?**
+Yes. WooCommerce must be installed and active.
 
-## Development
+**Can I reuse the same FAQs across many products?**
+Yes. Create a FAQ Set and assign it to specific products or whole product categories. Its items are
+merged with each product's own FAQs.
 
-```bash
-composer install
-composer cs        # PHPCS (WordPress security sniffs)
-composer analyse   # PHPStan level 6
-```
+Built by WPPoland — https://plogins.com
 
-## Quality gates
-
-PHPCS, PHPStan L6, `php -l`, `node -c`, and the wp.org Plugin Check all run green.
+License: GPL-2.0-or-later
