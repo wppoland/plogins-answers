@@ -63,6 +63,14 @@ In a dedicated "FAQs" product-information tab on the single product page.
 Yes. Each question is a button with `aria-expanded` controlling an `aria`-labelled
 region, it is keyboard operable, has visible focus, and respects reduced-motion.
 
+= Can I use HTML in answers? =
+
+Basic HTML allowed by `wp_kses_post` (links, lists, emphasis). Scripts are stripped on save and output.
+
+= Does it load assets on every product page? =
+
+No. CSS and JS load only on products that have at least one FAQ saved.
+
 == Screenshots ==
 
 1. The FAQ accordion on a product page.
