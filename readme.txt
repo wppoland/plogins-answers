@@ -77,6 +77,15 @@ No. CSS and JS load only on products that have at least one FAQ saved.
 2. The per-product FAQs tab in the product data panel.
 3. The Answers settings screen under WooCommerce.
 
+== External Services ==
+
+Answers does not connect to any external service. It makes no outbound HTTP
+requests, and loads no third-party scripts, fonts, or stylesheets — its CSS and
+JavaScript are served from the plugin folder only. The FAQ content you write is
+stored entirely on your own site: per-product items in the `_answers_faqs` post
+meta and plugin settings in the `answers_settings` option (with a schema marker
+in `answers_db_version`). Nothing is sent off-site, and the plugin sends no email.
+
 == Changelog ==
 
 = 0.1.0 =
