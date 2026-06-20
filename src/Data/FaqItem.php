@@ -19,6 +19,7 @@ final class FaqItem
         public readonly string $question,
         public readonly string $answer,
         public readonly string $key,
+        public readonly string $category = '',
     ) {
     }
 }

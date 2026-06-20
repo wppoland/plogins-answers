@@ -52,7 +52,8 @@ final class FaqRepository
             }
 
             $seen[$key] = true;
-            $items[]    = new FaqItem($question, $answer, md5($key));
+            $category   = isset($pair['category']) ? sanitize_key((string) $pair['category']) : '';
+            $items[]    = new FaqItem($question, $answer, md5($key), $category);
 
             if (count($items) >= self::MAX_ITEMS) {
                 break;
@@ -65,7 +66,7 @@ final class FaqRepository
     /**
      * Raw per-product FAQ pairs from post meta.
      *
-     * @return list<array{question: string, answer: string}>
+     * @return list<array{question: string, answer: string, category?: string}>
      */
     public function rawProductItems(int $productId): array
     {
@@ -76,7 +77,7 @@ final class FaqRepository
      * Coerce arbitrary stored data into a clean list of question/answer pairs.
      *
      * @param mixed $stored
-     * @return list<array{question: string, answer: string}>
+     * @return list<array{question: string, answer: string, category?: string}>
      */
     private function normalisePairs(mixed $stored): array
     {
@@ -91,10 +92,16 @@ final class FaqRepository
                 continue;
             }
 
-            $pairs[] = [
+            $pair = [
                 'question' => isset($row['question']) ? (string) $row['question'] : '',
                 'answer'   => isset($row['answer']) ? (string) $row['answer'] : '',
             ];
+
+            if (isset($row['category']) && (string) $row['category'] !== '') {
+                $pair['category'] = sanitize_key((string) $row['category']);
+            }
+
+            $pairs[] = $pair;
         }
 
         return $pairs;
