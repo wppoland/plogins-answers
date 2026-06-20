@@ -19,7 +19,7 @@ final class FaqRepeater
     /**
      * Render the repeater control.
      *
-     * @param list<array{question: string, answer: string}> $items
+     * @param list<array{question: string, answer: string, category?: string}> $items
      * @param string                                        $fieldName The name= base, e.g. "answers_faqs".
      */
     public static function render(array $items, string $fieldName): void
@@ -29,17 +29,17 @@ final class FaqRepeater
             <div class="answers-repeater__rows" data-answers-rows>
                 <?php
                 if ($items === []) {
-                    self::renderRow('__INDEX__', '', '', $fieldName, true);
+                    self::renderRow('__INDEX__', ['question' => '', 'answer' => ''], $fieldName, true);
                 } else {
                     foreach ($items as $index => $item) {
-                        self::renderRow((string) $index, $item['question'], $item['answer'], $fieldName, false);
+                        self::renderRow((string) $index, $item, $fieldName, false);
                     }
                 }
                 ?>
             </div>
 
             <template data-answers-template>
-                <?php self::renderRow('__INDEX__', '', '', $fieldName, true); ?>
+                <?php self::renderRow('__INDEX__', ['question' => '', 'answer' => ''], $fieldName, true); ?>
             </template>
 
             <p class="answers-repeater__actions">
@@ -55,14 +55,16 @@ final class FaqRepeater
     }
 
     /**
-     * Render a single repeater row.
+     * @param array<string, mixed> $item
      */
-    private static function renderRow(string $index, string $question, string $answer, string $fieldName, bool $isTemplate): void
+    private static function renderRow(string $index, array $item, string $fieldName, bool $isTemplate): void
     {
         // Template rows are inert until cloned, so disable their inputs to keep
         // them out of the POST payload.
         $disabled = $isTemplate ? ' disabled' : '';
         $base     = $fieldName . '[' . $index . ']';
+        $question = isset($item['question']) ? (string) $item['question'] : '';
+        $answer   = isset($item['answer']) ? (string) $item['answer'] : '';
         ?>
         <div class="answers-repeater__row" data-answers-row>
             <div class="answers-repeater__field">
@@ -90,6 +92,17 @@ final class FaqRepeater
                     ><?php echo esc_textarea($answer); ?></textarea>
                 </label>
             </div>
+            <?php
+            /**
+             * Fires after the answer field in a FAQ repeater row.
+             *
+             * @param string               $index     Row index or `__INDEX__` for templates.
+             * @param array<string, mixed> $item      Row data (question, answer, optional category).
+             * @param string               $fieldName POST field name base.
+             * @param bool                 $isTemplate Whether this row is a clone template.
+             */
+            do_action('answers/faq_repeater_after_answer', $index, $item, $fieldName, $isTemplate);
+            ?>
             <button type="button" class="button-link answers-repeater__remove" data-answers-remove aria-label="<?php esc_attr_e('Remove this question', 'answers'); ?>">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -103,7 +116,7 @@ final class FaqRepeater
      * missing either field are dropped.
      *
      * @param mixed $raw
-     * @return list<array{question: string, answer: string}>
+     * @return list<array{question: string, answer: string, category?: string}>
      */
     public static function sanitize(mixed $raw): array
     {
@@ -128,10 +141,24 @@ final class FaqRepeater
                 continue;
             }
 
-            $pairs[] = [
+            $pair = [
                 'question' => $question,
                 'answer'   => $answer,
             ];
+
+            /**
+             * Filter a sanitised FAQ repeater row before it is persisted.
+             *
+             * @param array{question: string, answer: string} $pair Sanitised question/answer pair.
+             * @param array<string, mixed>                  $row  Raw submitted row.
+             */
+            $pair = apply_filters('answers/faq_repeater_sanitize_row', $pair, $row);
+
+            if (! is_array($pair)) {
+                continue;
+            }
+
+            $pairs[] = $pair;
         }
 
         return $pairs;

@@ -4,7 +4,7 @@ Tags: woocommerce, faq, product faq, accordion
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 0.1.1
+Stable tag: 0.1.2
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -96,6 +96,11 @@ meta and plugin settings in the `answers_settings` option (with a schema marker
 in `answers_db_version`). Nothing is sent off-site, and the plugin sends no email.
 
 == Changelog ==
+
+= 0.1.2 =
+* Optional `category` field on FAQ items for Answers Pro grouping.
+* Repeater hooks: `answers/faq_repeater_after_answer` and `answers/faq_repeater_sanitize_row`.
+* Storefront items expose `data-faq-category` when a category is set.
 
 = 0.1.1 =
 * Extension hooks for Answers Pro voting: stable FAQ keys, `answers/faq_items`,

@@ -117,7 +117,13 @@ final class FaqRenderer implements HasHooks
                     $panelId  = $instance . '-panel-' . $index;
                     $buttonId = $instance . '-button-' . $index;
                     ?>
-                    <div class="answers-faq__item" data-faq-key="<?php echo esc_attr($item->key); ?>">
+                    <div
+                        class="answers-faq__item"
+                        data-faq-key="<?php echo esc_attr($item->key); ?>"
+                        <?php if ($item->category !== '') : ?>
+                            data-faq-category="<?php echo esc_attr($item->category); ?>"
+                        <?php endif; ?>
+                    >
                         <h3 class="answers-faq__question">
                             <button
                                 type="button"
