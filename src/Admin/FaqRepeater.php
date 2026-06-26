@@ -48,7 +48,7 @@ final class FaqRepeater
                 </button>
             </p>
             <p class="description answers-repeater__hint">
-                <?php esc_html_e('Drag is not required — questions render in the order listed. Leave a row blank to remove it on save. Answers accept basic HTML (links, lists, bold).', 'answers'); ?>
+                <?php esc_html_e('Drag is not required, questions render in the order listed. Leave a row blank to remove it on save. Answers accept basic HTML (links, lists, bold).', 'answers'); ?>
             </p>
         </div>
         <?php
