@@ -46,7 +46,7 @@ final class Settings implements HasHooks
     {
         add_submenu_page(
             'woocommerce',
-            __('Answers — Product FAQs', 'answers'),
+            __('Answers: Product FAQs', 'answers'),
             __('Answers', 'answers'),
             'manage_woocommerce',
             self::PAGE,
@@ -101,7 +101,7 @@ final class Settings implements HasHooks
                 <div class="answers-card">
                     <h2><?php esc_html_e('Display', 'answers'); ?></h2>
                     <p class="answers-card__desc">
-                        <?php esc_html_e('Control whether the FAQ tab appears on product pages and what it is called. With FAQs enabled, any product that has FAQ items gets the tab automatically — no per-product setup beyond authoring the questions.', 'answers'); ?>
+                        <?php esc_html_e('Control whether the FAQ tab appears on product pages and what it is called. With FAQs enabled, any product that has FAQ items gets the tab automatically, no per-product setup beyond authoring the questions.', 'answers'); ?>
                     </p>
                     <table class="form-table" role="presentation">
                         <tbody>
@@ -149,7 +149,7 @@ final class Settings implements HasHooks
                     </table>
 
                     <div class="answers-preview" aria-hidden="true">
-                        <p class="answers-preview__caption"><?php esc_html_e('Preview — how the product-page tabs read:', 'answers'); ?></p>
+                        <p class="answers-preview__caption"><?php esc_html_e('Preview, how the product-page tabs read:', 'answers'); ?></p>
                         <ul class="answers-preview__tabs">
                             <li class="answers-preview__tab"><?php esc_html_e('Description', 'answers'); ?></li>
                             <li class="answers-preview__tab answers-preview__tab--active"><?php echo esc_html($effectiveTitle); ?></li>

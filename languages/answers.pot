@@ -48,7 +48,7 @@ msgid "Add question"
 msgstr ""
 
 #: src/Admin/FaqRepeater.php:51
-msgid "Drag is not required — questions render in the order listed. Leave a row blank to remove it on save. Answers accept basic HTML (links, lists, bold)."
+msgid "Drag is not required, questions render in the order listed. Leave a row blank to remove it on save. Answers accept basic HTML (links, lists, bold)."
 msgstr ""
 
 #: src/Admin/FaqRepeater.php:70
@@ -83,7 +83,7 @@ msgid "Add questions buyers ask before purchase. They render as an accessible ac
 msgstr ""
 
 #: src/Admin/Settings.php:49
-msgid "Answers — Product FAQs"
+msgid "Answers: Product FAQs"
 msgstr ""
 
 #: src/Admin/Settings.php:50
@@ -103,7 +103,7 @@ msgid "Display"
 msgstr ""
 
 #: src/Admin/Settings.php:104
-msgid "Control whether the FAQ tab appears on product pages and what it is called. With FAQs enabled, any product that has FAQ items gets the tab automatically — no per-product setup beyond authoring the questions."
+msgid "Control whether the FAQ tab appears on product pages and what it is called. With FAQs enabled, any product that has FAQ items gets the tab automatically, no per-product setup beyond authoring the questions."
 msgstr ""
 
 #: src/Admin/Settings.php:109
@@ -129,7 +129,7 @@ msgid "Sets the tab label shoppers see next to \"Description\" and \"Reviews\". 
 msgstr ""
 
 #: src/Admin/Settings.php:152
-msgid "Preview — how the product-page tabs read:"
+msgid "Preview, how the product-page tabs read:"
 msgstr ""
 
 #: src/Admin/Settings.php:154
