@@ -89,7 +89,7 @@ No. CSS and JS load only on products that have at least one FAQ saved.
 == External Services ==
 
 Answers does not connect to any external service. It makes no outbound HTTP
-requests, and loads no third-party scripts, fonts, or stylesheets — its CSS and
+requests, and loads no third-party scripts, fonts, or stylesheets; its CSS and
 JavaScript are served from the plugin folder only. The FAQ content you write is
 stored entirely on your own site: per-product items in the `_answers_faqs` post
 meta and plugin settings in the `answers_settings` option (with a schema marker
