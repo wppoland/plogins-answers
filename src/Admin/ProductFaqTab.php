@@ -42,7 +42,7 @@ final class ProductFaqTab implements HasHooks
     public function addTab(array $tabs): array
     {
         $tabs['answers_faqs'] = [
-            'label'    => __('FAQs', 'answers'),
+            'label'    => __('FAQs', 'plogins-answers'),
             'target'   => 'answers_faqs_data',
             'class'    => ['hide_if_external'],
             'priority' => 65,
@@ -62,7 +62,7 @@ final class ProductFaqTab implements HasHooks
             <?php wp_nonce_field(self::NONCE_ACTION, self::NONCE_FIELD); ?>
             <div class="options_group">
                 <p class="answers-product-panel__intro">
-                    <?php esc_html_e('Add questions buyers ask before purchase. They render as an accessible accordion on the product page.', 'answers'); ?>
+                    <?php esc_html_e('Add questions buyers ask before purchase. They render as an accessible accordion on the product page.', 'plogins-answers'); ?>
                 </p>
                 <?php FaqRepeater::render($items, 'answers_faqs'); ?>
             </div>

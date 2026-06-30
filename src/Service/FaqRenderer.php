@@ -206,7 +206,7 @@ final class FaqRenderer implements HasHooks
     {
         $title = trim((string) ($this->settings()['tab_title'] ?? ''));
 
-        return $title !== '' ? $title : __('FAQs', 'answers');
+        return $title !== '' ? $title : __('FAQs', 'plogins-answers');
     }
 
     /**

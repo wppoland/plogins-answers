@@ -1,10 +1,10 @@
-=== Answers - Product FAQs for WooCommerce ===
+=== Plogins Answers for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, faq, product faq, accordion
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 0.1.2
+Stable tag: 0.1.3
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -28,15 +28,14 @@ close with a height transition that is switched off under `prefers-reduced-motio
 the answer text stays reachable when JavaScript is off, and the styling follows the
 visitor's light or dark colour scheme.
 
-Source code and bug reports live on GitHub: https://github.com/wppoland/answers
+Source code and bug reports live on GitHub: https://github.com/wppoland/plogins-answers
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/answers/docs/
-* **Plugin page** - https://plogins.com/answers/
-* **Source code** - https://github.com/wppoland/answers
-* **Bug reports and feature requests** - https://github.com/wppoland/answers/issues
-* **Discussions and questions** - https://github.com/wppoland/answers/discussions
+* **Documentation** - https://plogins.com/plogins-answers/docs/
+* **Plugin page** - https://plogins.com/plogins-answers/
+* **Source code** - https://github.com/wppoland/plogins-answers
+* **Bug reports and feature requests** - https://github.com/wppoland/plogins-answers/issues
 
 
 = Features =
@@ -96,6 +95,9 @@ meta and plugin settings in the `answers_settings` option (with a schema marker
 in `answers_db_version`). Nothing is sent off-site, and the plugin sends no email.
 
 == Changelog ==
+
+= 0.1.3 =
+* Renamed to Plogins Answers for WooCommerce for a more distinctive plugin name.
 
 = 0.1.2 =
 * Optional `category` field on FAQ items for Answers Pro grouping.
