@@ -4,7 +4,7 @@ includes:
 parameters:
     level: 6
     paths:
-        - answers.php
+        - plogins-answers.php
         - uninstall.php
         - src
         - config

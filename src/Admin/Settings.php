@@ -46,8 +46,8 @@ final class Settings implements HasHooks
     {
         add_submenu_page(
             'woocommerce',
-            __('Answers: Product FAQs', 'answers'),
-            __('Answers', 'answers'),
+            __('Answers: Product FAQs', 'plogins-answers'),
+            __('Answers', 'plogins-answers'),
             'manage_woocommerce',
             self::PAGE,
             [$this, 'renderPage'],
@@ -80,7 +80,7 @@ final class Settings implements HasHooks
         $settings = $this->settings();
 
         $tabTitle      = trim((string) ($settings['tab_title'] ?? ''));
-        $defaultTitle  = __('FAQs', 'answers');
+        $defaultTitle  = __('FAQs', 'plogins-answers');
         $effectiveTitle = $tabTitle !== '' ? $tabTitle : $defaultTitle;
         ?>
         <div class="wrap answers-admin">
@@ -88,9 +88,9 @@ final class Settings implements HasHooks
 
             <div class="answers-intro">
                 <div>
-                    <h2><?php esc_html_e('Answer buyer questions, right on the product page', 'answers'); ?></h2>
+                    <h2><?php esc_html_e('Answer buyer questions, right on the product page', 'plogins-answers'); ?></h2>
                     <p>
-                        <?php esc_html_e('Add FAQs to a product in its "FAQs" data tab. They render as an accessible, keyboard-friendly accordion in a "FAQs" tab on the product page.', 'answers'); ?>
+                        <?php esc_html_e('Add FAQs to a product in its "FAQs" data tab. They render as an accessible, keyboard-friendly accordion in a "FAQs" tab on the product page.', 'plogins-answers'); ?>
                     </p>
                 </div>
             </div>
@@ -99,14 +99,14 @@ final class Settings implements HasHooks
                 <?php settings_fields(self::PAGE); ?>
 
                 <div class="answers-card">
-                    <h2><?php esc_html_e('Display', 'answers'); ?></h2>
+                    <h2><?php esc_html_e('Display', 'plogins-answers'); ?></h2>
                     <p class="answers-card__desc">
-                        <?php esc_html_e('Control whether the FAQ tab appears on product pages and what it is called. With FAQs enabled, any product that has FAQ items gets the tab automatically, no per-product setup beyond authoring the questions.', 'answers'); ?>
+                        <?php esc_html_e('Control whether the FAQ tab appears on product pages and what it is called. With FAQs enabled, any product that has FAQ items gets the tab automatically, no per-product setup beyond authoring the questions.', 'plogins-answers'); ?>
                     </p>
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Enable FAQs', 'answers'); ?></th>
+                                <th scope="row"><?php esc_html_e('Enable FAQs', 'plogins-answers'); ?></th>
                                 <td>
                                     <label for="answers_enabled">
                                         <input
@@ -116,14 +116,14 @@ final class Settings implements HasHooks
                                             value="1"
                                             <?php checked((bool) ($settings['enabled'] ?? false), true); ?>
                                         />
-                                        <?php esc_html_e('Show product FAQs on the storefront.', 'answers'); ?>
+                                        <?php esc_html_e('Show product FAQs on the storefront.', 'plogins-answers'); ?>
                                     </label>
-                                    <p class="description"><?php esc_html_e('When off, no FAQs render and the FAQ stylesheet is not loaded.', 'answers'); ?></p>
+                                    <p class="description"><?php esc_html_e('When off, no FAQs render and the FAQ stylesheet is not loaded.', 'plogins-answers'); ?></p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    <label for="answers_tab_title"><?php esc_html_e('Tab title', 'answers'); ?></label>
+                                    <label for="answers_tab_title"><?php esc_html_e('Tab title', 'plogins-answers'); ?></label>
                                 </th>
                                 <td>
                                     <input
@@ -132,13 +132,13 @@ final class Settings implements HasHooks
                                         name="<?php echo esc_attr(self::OPTION); ?>[tab_title]"
                                         value="<?php echo esc_attr((string) ($settings['tab_title'] ?? '')); ?>"
                                         class="regular-text"
-                                        placeholder="<?php esc_attr_e('FAQs', 'answers'); ?>"
+                                        placeholder="<?php esc_attr_e('FAQs', 'plogins-answers'); ?>"
                                     />
                                     <p class="description">
                                         <?php
                                         printf(
                                             /* translators: %s: the tab label currently in effect, e.g. "FAQs". */
-                                            esc_html__('Sets the tab label shoppers see next to "Description" and "Reviews". Leave blank to use "FAQs". Currently showing: %s', 'answers'),
+                                            esc_html__('Sets the tab label shoppers see next to "Description" and "Reviews". Leave blank to use "FAQs". Currently showing: %s', 'plogins-answers'),
                                             '<strong>' . esc_html($effectiveTitle) . '</strong>',
                                         );
                                         ?>
@@ -149,11 +149,11 @@ final class Settings implements HasHooks
                     </table>
 
                     <div class="answers-preview" aria-hidden="true">
-                        <p class="answers-preview__caption"><?php esc_html_e('Preview, how the product-page tabs read:', 'answers'); ?></p>
+                        <p class="answers-preview__caption"><?php esc_html_e('Preview, how the product-page tabs read:', 'plogins-answers'); ?></p>
                         <ul class="answers-preview__tabs">
-                            <li class="answers-preview__tab"><?php esc_html_e('Description', 'answers'); ?></li>
+                            <li class="answers-preview__tab"><?php esc_html_e('Description', 'plogins-answers'); ?></li>
                             <li class="answers-preview__tab answers-preview__tab--active"><?php echo esc_html($effectiveTitle); ?></li>
-                            <li class="answers-preview__tab"><?php esc_html_e('Reviews', 'answers'); ?></li>
+                            <li class="answers-preview__tab"><?php esc_html_e('Reviews', 'plogins-answers'); ?></li>
                         </ul>
                     </div>
                 </div>

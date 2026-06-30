@@ -44,11 +44,11 @@ final class FaqRepeater
 
             <p class="answers-repeater__actions">
                 <button type="button" class="button answers-repeater__add" data-answers-add>
-                    <?php esc_html_e('Add question', 'answers'); ?>
+                    <?php esc_html_e('Add question', 'plogins-answers'); ?>
                 </button>
             </p>
             <p class="description answers-repeater__hint">
-                <?php esc_html_e('Drag is not required, questions render in the order listed. Leave a row blank to remove it on save. Answers accept basic HTML (links, lists, bold).', 'answers'); ?>
+                <?php esc_html_e('Drag is not required, questions render in the order listed. Leave a row blank to remove it on save. Answers accept basic HTML (links, lists, bold).', 'plogins-answers'); ?>
             </p>
         </div>
         <?php
@@ -69,25 +69,25 @@ final class FaqRepeater
         <div class="answers-repeater__row" data-answers-row>
             <div class="answers-repeater__field">
                 <label class="answers-repeater__label">
-                    <span class="answers-repeater__label-text"><?php esc_html_e('Question', 'answers'); ?></span>
+                    <span class="answers-repeater__label-text"><?php esc_html_e('Question', 'plogins-answers'); ?></span>
                     <input
                         type="text"
                         class="answers-repeater__question widefat"
                         name="<?php echo esc_attr($base . '[question]'); ?>"
                         value="<?php echo esc_attr($question); ?>"
-                        placeholder="<?php esc_attr_e('e.g. What is your return policy?', 'answers'); ?>"
+                        placeholder="<?php esc_attr_e('e.g. What is your return policy?', 'plogins-answers'); ?>"
                         <?php echo esc_attr($disabled); ?>
                     />
                 </label>
             </div>
             <div class="answers-repeater__field">
                 <label class="answers-repeater__label">
-                    <span class="answers-repeater__label-text"><?php esc_html_e('Answer', 'answers'); ?></span>
+                    <span class="answers-repeater__label-text"><?php esc_html_e('Answer', 'plogins-answers'); ?></span>
                     <textarea
                         class="answers-repeater__answer widefat"
                         name="<?php echo esc_attr($base . '[answer]'); ?>"
                         rows="3"
-                        placeholder="<?php esc_attr_e('Write a clear, concise answer. Basic HTML is allowed.', 'answers'); ?>"
+                        placeholder="<?php esc_attr_e('Write a clear, concise answer. Basic HTML is allowed.', 'plogins-answers'); ?>"
                         <?php echo esc_attr($disabled); ?>
                     ><?php echo esc_textarea($answer); ?></textarea>
                 </label>
@@ -103,7 +103,7 @@ final class FaqRepeater
              */
             do_action('answers/faq_repeater_after_answer', $index, $item, $fieldName, $isTemplate);
             ?>
-            <button type="button" class="button-link answers-repeater__remove" data-answers-remove aria-label="<?php esc_attr_e('Remove this question', 'answers'); ?>">
+            <button type="button" class="button-link answers-repeater__remove" data-answers-remove aria-label="<?php esc_attr_e('Remove this question', 'plogins-answers'); ?>">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
