@@ -1,4 +1,4 @@
-=== Plogins Answers for WooCommerce ===
+=== Plogins Answers - Product Q for WooCommerceA for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, faq, product faq, accordion
 Requires at least: 6.5
