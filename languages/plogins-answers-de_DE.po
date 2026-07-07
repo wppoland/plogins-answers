@@ -7,22 +7,22 @@ msgstr ""
 "POT-Creation-Date: 2026-06-16T20:23:47+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: WPPoland <kontakt@wppoland.com>\n"
-"Language-Team: Polish <pl@li.org>\n"
-"Language: pl_PL\n"
+"Language-Team: German <de@li.org>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: plogins-answers\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Answers - Product FAQs for WooCommerce"
-msgstr "Answers - FAQ produktów dla WooCommerce"
+msgstr "Answers - Produkt-FAQs für WooCommerce"
 
 msgid "https://plogins.com/answers/"
 msgstr "https://plogins.com/answers/"
 
 msgid "Add per-product FAQs as an accessible accordion to reduce pre-sale questions."
-msgstr "Dodaj FAQ osobno dla każdego produktu jako dostępny akordeon i ogranicz liczbę pytań przed zakupem."
+msgstr "Fügen Sie produktbezogene FAQs als barrierefreies Akkordeon hinzu, um Fragen vor dem Kauf zu reduzieren."
 
 msgid "WPPoland"
 msgstr "WPPoland"
@@ -31,74 +31,74 @@ msgid "https://plogins.com/"
 msgstr "https://plogins.com/"
 
 msgid "Answers - Product FAQs for WooCommerce requires WooCommerce to be active."
-msgstr "Answers - FAQ produktów dla WooCommerce wymaga aktywnego WooCommerce."
+msgstr "Answers - Produkt-FAQs für WooCommerce erfordert, dass WooCommerce aktiv ist."
 
 msgid "Add question"
-msgstr "Dodaj pytanie"
+msgstr "Frage hinzufügen"
 
 msgid "Drag is not required, questions render in the order listed. Leave a row blank to remove it on save. Answers accept basic HTML (links, lists, bold)."
-msgstr "Przeciąganie nie jest wymagane, pytania wyświetlają się w podanej kolejności. Zostaw pusty wiersz, aby usunąć go przy zapisie. Odpowiedzi obsługują podstawowy HTML: linki, listy i pogrubienie."
+msgstr "Ziehen ist nicht erforderlich, die Fragen werden in der angegebenen Reihenfolge angezeigt. Lassen Sie eine Zeile leer, um sie beim Speichern zu entfernen. Antworten unterstützen einfaches HTML: Links, Listen und Fettdruck."
 
 msgid "Question"
-msgstr "Pytanie"
+msgstr "Frage"
 
 msgid "e.g. What is your return policy?"
-msgstr "np. Jaka jest Wasza polityka zwrotów?"
+msgstr "z.B. Wie lauten Ihre Rückgabebedingungen?"
 
 msgid "Answer"
-msgstr "Odpowiedź"
+msgstr "Antwort"
 
 msgid "Write a clear, concise answer. Basic HTML is allowed."
-msgstr "Napisz jasną i zwięzłą odpowiedź. Dozwolony jest podstawowy kod HTML."
+msgstr "Schreiben Sie eine klare, kurze Antwort. Einfaches HTML ist erlaubt."
 
 msgid "Remove this question"
-msgstr "Usuń to pytanie"
+msgstr "Diese Frage entfernen"
 
 msgid "FAQs"
-msgstr "Najczęstsze pytania"
+msgstr "FAQs"
 
 msgid "Add questions buyers ask before purchase. They render as an accessible accordion on the product page."
-msgstr "Dodaj pytania, które kupujący zadają przed zakupem. Na stronie produktu wyświetlą się jako dostępny akordeon."
+msgstr "Fügen Sie Fragen hinzu, die Käufer vor dem Kauf stellen. Sie werden auf der Produktseite als barrierefreies Akkordeon angezeigt."
 
 msgid "Answers: Product FAQs"
-msgstr "Answers: FAQ produktów"
+msgstr "Antworten: Produkt-FAQs"
 
 msgid "Answers"
-msgstr "Answers"
+msgstr "Antworten"
 
 msgid "Answer buyer questions, right on the product page"
-msgstr "Odpowiadaj na pytania kupujących bezpośrednio na stronie produktu"
+msgstr "Beantworten Sie Käuferfragen direkt auf der Produktseite"
 
 msgid "Add FAQs to a product in its \"FAQs\" data tab. They render as an accessible, keyboard-friendly accordion in a \"FAQs\" tab on the product page."
-msgstr "Dodaj FAQ do produktu w zakładce danych „FAQs”. Na stronie produktu wyświetli się jako dostępny, wygodny dla klawiatury akordeon w zakładce „FAQs”."
+msgstr "Fügen Sie einem Produkt im Daten-Tab „FAQs“ Fragen und Antworten hinzu. Sie erscheinen auf der Produktseite als barrierefreies, tastaturfreundliches Akkordeon im Tab „FAQs“."
 
 msgid "Display"
-msgstr "Wyświetlanie"
+msgstr "Anzeige"
 
 msgid "Control whether the FAQ tab appears on product pages and what it is called. With FAQs enabled, any product that has FAQ items gets the tab automatically, no per-product setup beyond authoring the questions."
-msgstr "Ustaw, czy zakładka FAQ ma pojawiać się na stronach produktów i jak ma się nazywać. Gdy FAQ jest włączone, każdy produkt z pytaniami otrzyma zakładkę automatycznie, bez dodatkowej konfiguracji poza wpisaniem pytań."
+msgstr "Steuern Sie, ob der FAQ-Tab auf Produktseiten erscheint und wie er heißt. Wenn FAQs aktiviert sind, erhält jedes Produkt mit FAQ-Einträgen den Tab automatisch, ohne weitere produktspezifische Einrichtung außer dem Erstellen der Fragen."
 
 msgid "Enable FAQs"
-msgstr "Włącz najczęstsze pytania"
+msgstr "FAQs aktivieren"
 
 msgid "Show product FAQs on the storefront."
-msgstr "Wyświetlaj najczęstsze pytania o produkcie w sklepie."
+msgstr "Produkt-FAQs im Shop anzeigen."
 
 msgid "When off, no FAQs render and the FAQ stylesheet is not loaded."
-msgstr "Gdy opcja jest wyłączona, FAQ nie jest wyświetlane, a arkusz stylów FAQ nie jest ładowany."
+msgstr "Wenn diese Option deaktiviert ist, werden keine FAQs gerendert und das FAQ-Stylesheet wird nicht geladen."
 
 msgid "Tab title"
-msgstr "Tytuł zakładki"
+msgstr "Tab-Titel"
 
 msgid "Sets the tab label shoppers see next to \"Description\" and \"Reviews\". Leave blank to use \"FAQs\". Currently showing: %s"
-msgstr "Ustawia etykietę zakładki widoczną obok „Opis” i „Recenzje”. Zostaw puste, aby użyć „FAQs”. Aktualnie wyświetlane: %s"
+msgstr "Legt die Registerkartenbezeichnung fest, die Käufer neben „Beschreibung“ und „Bewertungen“ sehen. Lassen Sie das Feld leer, um „FAQs“ zu verwenden. Derzeit angezeigt: %s"
 
 msgid "Preview, how the product-page tabs read:"
-msgstr "Podgląd, jak wyglądają zakładki na stronie produktu:"
+msgstr "Vorschau der Produktseiten-Tabs:"
 
 msgid "Description"
-msgstr "Opis"
+msgstr "Beschreibung"
 
 msgid "Reviews"
-msgstr "Recenzje"
+msgstr "Rezensionen"
 
