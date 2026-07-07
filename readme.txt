@@ -4,7 +4,7 @@ Tags: woocommerce, faq, product faq, accordion
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 0.1.3
+Stable tag: 1.0.1
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -100,6 +100,9 @@ meta and plugin settings in the `answers_settings` option (with a schema marker
 in `answers_db_version`). Nothing is sent off-site, and the plugin sends no email.
 
 == Changelog ==
+
+= 1.0.1 =
+* First stable release.
 
 = 0.1.3 =
 * Renamed to Plogins Answers for WooCommerce for a more distinctive plugin name.
