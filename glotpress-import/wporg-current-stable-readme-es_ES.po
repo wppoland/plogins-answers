@@ -1,0 +1,76 @@
+# wp.org Stable Readme translation (es_ES)
+msgid ""
+msgstr ""
+"Project-Id-Version: answers Stable Readme\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: plogins-i18n\n"
+
+msgid "Requires Plugins: woocommerce"
+msgstr "Requiere complementos: woocommerce"
+
+msgid "Add per-product FAQs as an accessible accordion to reduce pre-sale questions."
+msgstr "Añade preguntas frecuentes por producto como un acordeón accesible para reducir las preguntas previas a la venta."
+
+msgid "Answers adds a frequently-asked-questions section to your WooCommerce products,\nso shoppers can read the common pre-sale questions on the product page instead of\nemailing to ask."
+msgstr "Respuestas añade una sección de preguntas frecuentes a sus productos WooCommerce.\npara que los compradores puedan leer las preguntas comunes de preventa en la página del producto en lugar de\nenviando un correo electrónico para preguntar."
+
+msgid "You write the FAQs in a \"FAQs\" tab inside the WooCommerce Product data panel using\na question/answer repeater. They show up in their own \"FAQs\" tab on the single\nproduct page, next to Description and Reviews."
+msgstr "Escribe las preguntas frecuentes en una pestaña \"Preguntas frecuentes\" dentro del panel de datos del producto WooCommerce usando\nun repetidor de preguntas/respuestas. Aparecen en su propia pestaña \"Preguntas frecuentes\" en el sencillo.\npágina del producto, junto a Descripción y Reseñas."
+
+msgid "The front-end FAQs are an <strong>accessible accordion</strong>. Each question is a real\n`<button>` with `aria-expanded` controlling an `aria`-labelled region, so it works\nwith the keyboard and is announced correctly by screen readers. Panels open and\nclose with a height transition that is switched off under `prefers-reduced-motion`,\nthe answer text stays reachable when JavaScript is off, and the styling follows the\nvisitor's light or dark colour scheme."
+msgstr "Las preguntas frecuentes del front-end son un <strong>acordeón accesible</strong>. Cada pregunta es una verdadera\n`<botón>` con `aria-expanded` controlando una región etiquetada con `aria`, por lo que funciona\ncon el teclado y es anunciado correctamente por los lectores de pantalla. Los paneles se abren y\ncerrar con una transición de altura que se desactiva en \"prefiere movimiento reducido\",\nel texto de la respuesta permanece accesible cuando JavaScript está desactivado y el estilo sigue el\ncombinación de colores claros u oscuros del visitante."
+
+msgid "Source code and bug reports live on GitHub: https://github.com/wppoland/plogins-answers"
+msgstr "El código fuente y los informes de errores están disponibles en GitHub: https://github.com/wppoland/plogins-answers"
+
+msgid "* <strong>Documentation</strong> - https://plogins.com/plogins-answers/docs/\n* <strong>Plugin page</strong> - https://plogins.com/plogins-answers/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-answers\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-answers/issues"
+msgstr "* <strong>Documentación</strong> - https://plogins.com/es/plogins-answers/docs/\n* <strong>Página de complementos</strong> - https://plogins.com/es/plogins-answers/\n* <strong>Código fuente</strong> - https://github.com/wppoland/plogins-answers\n* <strong>Informes de errores y solicitudes de funciones</strong> - https://github.com/wppoland/plogins-answers/issues"
+
+msgid "* Per-product FAQ items, authored in a \"FAQs\" product data tab.\n* Accordion built from a `<button>` plus an `aria`-labelled region: keyboard operable, visible focus ring, `aria-expanded` kept in sync.\n* Shows in its own \"FAQs\" product-information tab; the tab label is editable.\n* Answers accept basic HTML, sanitised with `wp_kses_post` on save and again on output.\n* CSS custom properties for theming, a dark-scheme palette, and motion that respects `prefers-reduced-motion`.\n* Front-end assets load only on product pages that actually have FAQs.\n* Translation ready (POT included), and removes its options on uninstall.\n* Declares HPOS and cart/checkout blocks compatibility."
+msgstr "* Elementos de preguntas frecuentes por producto, creados en una pestaña de datos del producto \"Preguntas frecuentes\".\n* Acordeón construido a partir de un `<botón>` más una región etiquetada como `aria`: teclado operable, anillo de enfoque visible, `aria-expanded` mantenido sincronizado.\n* Se muestra en su propia pestaña de información del producto \"Preguntas frecuentes\"; la etiqueta de la pestaña es editable.\n* Las respuestas aceptan HTML básico, desinfectado con `wp_kses_post` al guardar y nuevamente al generar.\n* Propiedades personalizadas de CSS para temas, una paleta de esquemas oscuros y movimiento que respeta \"prefiere movimiento reducido\".\n* Los recursos de front-end se cargan solo en las páginas de productos que realmente tienen preguntas frecuentes.\n* Listo para traducción (POT incluido) y elimina sus opciones al desinstalar.\n* Declara compatibilidad con HPOS y bloques de carrito/pago."
+
+msgid "1. Upload the plugin to `/wp-content/plugins/answers`, or install via Plugins → Add New.\n2. Activate it. WooCommerce must be active.\n3. Edit a product and open the <strong>FAQs<strong> tab to add questions. 4. Rename the FAQ tab under </strong>WooCommerce → Answers</strong> if you like."
+msgstr "1. Cargue el complemento en `/wp-content/plugins/answers`, o instálelo a través de Complementos → Añadir nuevo.\n2. Actívalo. WooCommerce debe estar activo.\n3. Edite un producto y abra la pestaña <strong>Preguntas frecuentes<strong> para añadir preguntas. 4. Cambie el nombre de la pestaña Preguntas frecuentes en </strong>WooCommerce → Respuestas</strong> si lo desea."
+
+msgid "Yes. WooCommerce must be installed and active."
+msgstr "Sí. WooCommerce debe estar instalado y activo."
+
+msgid "In a dedicated \"FAQs\" product-information tab on the single product page."
+msgstr "En una pestaña dedicada a la información del producto \"Preguntas frecuentes\" en la página de un solo producto."
+
+msgid "Yes. Each question is a button with `aria-expanded` controlling an `aria`-labelled\nregion, it is keyboard operable, has visible focus, and respects reduced-motion."
+msgstr "Sí. Cada pregunta es un botón con \"aria-expanded\" que controla una etiqueta con \"aria\"\nregión, se puede operar con el teclado, tiene un enfoque visible y respeta el movimiento reducido."
+
+msgid "Basic HTML allowed by `wp_kses_post` (links, lists, emphasis). Scripts are stripped on save and output."
+msgstr "HTML básico permitido por `wp_kses_post` (enlaces, listas, énfasis). Los scripts se eliminan al guardar y generar."
+
+msgid "No. CSS and JS load only on products that have at least one FAQ saved."
+msgstr "No. CSS y JS se cargan solo en productos que tienen al menos una pregunta frecuente guardada."
+
+msgid "Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data."
+msgstr "Sí. Este complemento es compatible con WordPress Multisite. Activarlo en red o activarlo en sitios individuales; Cada sitio mantiene su propia configuración y datos."
+
+msgid "1. The FAQ accordion on a product page.\n2. The per-product FAQs tab in the product data panel.\n3. The Answers settings screen under WooCommerce."
+msgstr "1. El acordeón de preguntas frecuentes en la página de un producto.\n2. La pestaña de preguntas frecuentes por producto en el panel de datos del producto.\n3. La pantalla de configuración de Respuestas en WooCommerce."
+
+msgid "Answers does not connect to any external service. It makes no outbound HTTP\nrequests, and loads no third-party scripts, fonts, or stylesheets; its CSS and\nJavaScript are served from the plugin folder only. The FAQ content you write is\nstored entirely on your own site: per-product items in the `_answers_faqs` post\nmeta and plugin settings in the `answers_settings` option (with a schema marker\nin `answers_db_version`). Nothing is sent off-site, and the plugin sends no email."
+msgstr "Respuestas no se conecta a ningún servicio externo. No hace HTTP saliente\nno solicita ni carga scripts, fuentes ni hojas de estilo de terceros; su CSS y\nJavaScript se sirve únicamente desde la carpeta del complemento. El contenido de preguntas frecuentes que escribe es\nalmacenado completamente en tu propio sitio: elementos por producto en la publicación `_answers_faqs`\nconfiguración de meta y complementos en la opción `answers_settings` (con un marcador de esquema\nen `answers_db_version`). No se envía nada fuera del sitio y el complemento no envía ningún correo electrónico."
+
+msgid "* First stable release."
+msgstr "* Primera versión estable."
+
+msgid "* Renamed to Plogins Answers for WooCommerce for a more distinctive plugin name."
+msgstr "* Renombrado a Plogins Answers for WooCommerce para obtener un nombre de complemento más distintivo."
+
+msgid "* Optional `category` field on FAQ items for Answers Pro grouping.\n* Repeater hooks: `answers/faq_repeater_after_answer` and `answers/faq_repeater_sanitize_row`.\n* Storefront items expose `data-faq-category` when a category is set."
+msgstr "* Campo opcional de \"categoría\" en elementos de preguntas frecuentes para la agrupación de Answers Pro.\n* Ganchos repetidores: `answers/faq_repeater_after_answer` y `answers/faq_repeater_sanitize_row`.\n* Los elementos del escaparate exponen la \"categoría de preguntas frecuentes de datos\" cuando se establece una categoría."
+
+msgid "* Extension hooks for Answers Pro voting: stable FAQ keys, `answers/faq_items`,\n  and `answers/faq_after_answer`."
+msgstr "* Ganchos de extensión para la votación de Answers Pro: claves de preguntas frecuentes estables, `answers/faq_items`,\n  y `respuestas/faq_after_answer`."
+
+msgid "* Initial release: per-product FAQs and an accessible accordion in a \"FAQs\" product tab."
+msgstr "* Lanzamiento inicial: preguntas frecuentes por producto y un acordeón accesible en la pestaña de producto \"Preguntas frecuentes\"."
+

@@ -12,93 +12,167 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Domain: plogins-answers\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: plogins-answers\n"
 
+#. Plugin Name of the plugin
+#: answers.php
 msgid "Answers - Product FAQs for WooCommerce"
 msgstr "Answers - preguntas frecuentes de producto para WooCommerce"
 
+#. Plugin URI of the plugin
+#: answers.php
 msgid "https://plogins.com/answers/"
 msgstr "https://plogins.com/answers/"
 
-msgid "Add per-product FAQs as an accessible accordion to reduce pre-sale questions."
-msgstr "Añada preguntas frecuentes por producto como un acordeón accesible para reducir las dudas antes de la compra."
+#. Description of the plugin
+#: answers.php
+msgid ""
+"Add per-product FAQs as an accessible accordion to reduce pre-sale "
+"questions."
+msgstr ""
+"Añada preguntas frecuentes por producto como un acordeón accesible para "
+"reducir las dudas antes de la compra."
 
+#. Author of the plugin
+#: answers.php
 msgid "WPPoland"
 msgstr "WPPoland"
 
+#. Author URI of the plugin
+#: answers.php
 msgid "https://plogins.com/"
 msgstr "https://plogins.com/"
 
-msgid "Answers - Product FAQs for WooCommerce requires WooCommerce to be active."
-msgstr "Answers - preguntas frecuentes de producto para WooCommerce requiere que WooCommerce esté activo."
+#: answers.php:47
+msgid ""
+"Answers - Product FAQs for WooCommerce requires WooCommerce to be active."
+msgstr ""
+"Answers - preguntas frecuentes de producto para WooCommerce requiere que "
+"WooCommerce esté activo."
 
+#: src/Admin/FaqRepeater.php:47
 msgid "Add question"
-msgstr "Agregar pregunta"
+msgstr "Añadir pregunta"
 
-msgid "Drag is not required, questions render in the order listed. Leave a row blank to remove it on save. Answers accept basic HTML (links, lists, bold)."
-msgstr "No hace falta arrastrar, las preguntas se muestran en el orden indicado. Deje una fila vacía para eliminarla al guardar. Las respuestas aceptan HTML básico: enlaces, listas y negrita."
+#: src/Admin/FaqRepeater.php:51
+msgid ""
+"Drag is not required, questions render in the order listed. Leave a row "
+"blank to remove it on save. Answers accept basic HTML (links, lists, bold)."
+msgstr ""
+"No hace falta arrastrar, las preguntas se muestran en el orden indicado. "
+"Deje una fila vacía para eliminarla al guardar. Las respuestas aceptan HTML "
+"básico: enlaces, listas y negrita."
 
+#: src/Admin/FaqRepeater.php:70
 msgid "Question"
 msgstr "Pregunta"
 
+#: src/Admin/FaqRepeater.php:76
 msgid "e.g. What is your return policy?"
 msgstr "p. ej. ¿Cuál es su política de devoluciones?"
 
+#: src/Admin/FaqRepeater.php:83
 msgid "Answer"
 msgstr "Respuesta"
 
+#: src/Admin/FaqRepeater.php:88
 msgid "Write a clear, concise answer. Basic HTML is allowed."
 msgstr "Escribe una respuesta clara y concisa. Se permite el HTML básico."
 
+#: src/Admin/FaqRepeater.php:93
 msgid "Remove this question"
 msgstr "Eliminar esta pregunta"
 
+#: src/Admin/ProductFaqTab.php:45 src/Admin/Settings.php:83
+#: src/Admin/Settings.php:135 src/Service/FaqRenderer.php:193
 msgid "FAQs"
 msgstr "Preguntas frecuentes"
 
-msgid "Add questions buyers ask before purchase. They render as an accessible accordion on the product page."
-msgstr "Añada las preguntas que los compradores hacen antes de comprar. Se mostrarán como un acordeón accesible en la página del producto."
+#: src/Admin/ProductFaqTab.php:65
+msgid ""
+"Add questions buyers ask before purchase. They render as an accessible "
+"accordion on the product page."
+msgstr ""
+"Añada las preguntas que los compradores hacen antes de comprar. Se mostrarán"
+" como un acordeón accesible en la página del producto."
 
+#: src/Admin/Settings.php:49
 msgid "Answers: Product FAQs"
 msgstr "Respuestas: Preguntas frecuentes sobre productos"
 
+#: src/Admin/Settings.php:50
 msgid "Answers"
 msgstr "Respuestas"
 
+#: src/Admin/Settings.php:91
 msgid "Answer buyer questions, right on the product page"
-msgstr "Responda las preguntas de los compradores directamente en la página del producto"
+msgstr ""
+"Responda las preguntas de los compradores directamente en la página del "
+"producto"
 
-msgid "Add FAQs to a product in its \"FAQs\" data tab. They render as an accessible, keyboard-friendly accordion in a \"FAQs\" tab on the product page."
-msgstr "Añada preguntas frecuentes a un producto en su pestaña de datos „FAQs”. Se mostrarán como un acordeón accesible y compatible con teclado en la pestaña „FAQs” de la página del producto."
+#: src/Admin/Settings.php:93
+msgid ""
+"Add FAQs to a product in its \"FAQs\" data tab. They render as an "
+"accessible, keyboard-friendly accordion in a \"FAQs\" tab on the product "
+"page."
+msgstr ""
+"Añada preguntas frecuentes a un producto en su pestaña de datos «FAQs». Se "
+"mostrarán como un acordeón accesible y compatible con teclado en la pestaña "
+"«FAQs» de la página del producto."
 
+#: src/Admin/Settings.php:102
 msgid "Display"
 msgstr "Mostrar"
 
-msgid "Control whether the FAQ tab appears on product pages and what it is called. With FAQs enabled, any product that has FAQ items gets the tab automatically, no per-product setup beyond authoring the questions."
-msgstr "Controle si la pestaña de preguntas frecuentes aparece en las páginas de producto y cómo se llama. Con las FAQs activadas, cualquier producto que tenga preguntas recibe la pestaña automáticamente, sin configuración adicional más allá de redactarlas."
+#: src/Admin/Settings.php:104
+msgid ""
+"Control whether the FAQ tab appears on product pages and what it is called. "
+"With FAQs enabled, any product that has FAQ items gets the tab "
+"automatically, no per-product setup beyond authoring the questions."
+msgstr ""
+"Controle si la pestaña de preguntas frecuentes aparece en las páginas de "
+"producto y cómo se llama. Con las FAQs activadas, cualquier producto que "
+"tenga preguntas recibe la pestaña automáticamente, sin configuración "
+"adicional más allá de redactarlas."
 
+#: src/Admin/Settings.php:109
 msgid "Enable FAQs"
 msgstr "Habilitar preguntas frecuentes"
 
+#: src/Admin/Settings.php:119
 msgid "Show product FAQs on the storefront."
 msgstr "Mostrar las preguntas frecuentes del producto en la tienda."
 
+#: src/Admin/Settings.php:121
 msgid "When off, no FAQs render and the FAQ stylesheet is not loaded."
-msgstr "Cuando está desactivado, no se muestran FAQs y no se carga la hoja de estilos de FAQ."
+msgstr ""
+"Cuando está desactivado, no se muestran FAQs y no se carga la hoja de "
+"estilos de FAQ."
 
+#: src/Admin/Settings.php:126
 msgid "Tab title"
 msgstr "Título de la pestaña"
 
-msgid "Sets the tab label shoppers see next to \"Description\" and \"Reviews\". Leave blank to use \"FAQs\". Currently showing: %s"
-msgstr "Define la etiqueta de la pestaña que los compradores ven junto a „Descripción” y „Reseñas”. Déjelo vacío para usar „FAQs”. Mostrando ahora: %s"
+#. translators: %s: the tab label currently in effect, e.g. "FAQs".
+#: src/Admin/Settings.php:141
+#, php-format
+msgid ""
+"Sets the tab label shoppers see next to \"Description\" and \"Reviews\". "
+"Leave blank to use \"FAQs\". Currently showing: %s"
+msgstr ""
+"Define la etiqueta de la pestaña que los compradores ven junto a "
+"«Descripción» y «Reseñas». Déjelo vacío para usar «FAQs». Mostrando ahora: "
+"%s"
 
+#: src/Admin/Settings.php:152
 msgid "Preview, how the product-page tabs read:"
 msgstr "Vista previa de las pestañas de la página de producto:"
 
+#: src/Admin/Settings.php:154
 msgid "Description"
 msgstr "Descripción"
 
+#: src/Admin/Settings.php:156
 msgid "Reviews"
 msgstr "Reseñas"
-
