@@ -1,0 +1,76 @@
+# wp.org Stable Readme translation (de_DE)
+msgid ""
+msgstr ""
+"Project-Id-Version: answers Stable Readme\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: plogins-i18n\n"
+
+msgid "Requires Plugins: woocommerce"
+msgstr "Erfordert Plugins: woocommerce"
+
+msgid "Add per-product FAQs as an accessible accordion to reduce pre-sale questions."
+msgstr "Füge FAQs pro Produkt als barrierefreies Akkordeon hinzu, um Fragen vor dem Verkauf zu reduzieren."
+
+msgid "Answers adds a frequently-asked-questions section to your WooCommerce products,\nso shoppers can read the common pre-sale questions on the product page instead of\nemailing to ask."
+msgstr "Answers fügt deinen WooCommerce-Produkten einen Abschnitt mit häufig gestellten Fragen hinzu.\nSo können Käufer die häufigen Vorverkaufsfragen stattdessen auf der Produktseite lesen\nper E-Mail fragen."
+
+msgid "You write the FAQs in a \"FAQs\" tab inside the WooCommerce Product data panel using\na question/answer repeater. They show up in their own \"FAQs\" tab on the single\nproduct page, next to Description and Reviews."
+msgstr "Du schreiben die FAQs in eine Registerkarte „FAQs“ im WooCommerce-Produktdatenbereich mit\nein Frage/Antwort-Repeater. Du wirst auf der Single in ihrem eigenen Tab „FAQs“ angezeigt\nProduktseite neben Beschreibung und Rezensionen."
+
+msgid "The front-end FAQs are an <strong>accessible accordion</strong>. Each question is a real\n`<button>` with `aria-expanded` controlling an `aria`-labelled region, so it works\nwith the keyboard and is announced correctly by screen readers. Panels open and\nclose with a height transition that is switched off under `prefers-reduced-motion`,\nthe answer text stays reachable when JavaScript is off, and the styling follows the\nvisitor's light or dark colour scheme."
+msgstr "Die Front-End-FAQs sind ein <strong>zugängliches Akkordeon</strong>. Jede Frage ist eine echte\n`<button>` mit `aria-expanded` steuert eine mit `aria` gekennzeichnete Region, also funktioniert es\nmit der Tastatur und wird von Screenreadern korrekt angesagt. Panels öffnen und\nschließen mit einem Höhenübergang, der unter „prefers-reduced-motion“ ausgeschaltet ist,\nDer Antworttext bleibt erreichbar, wenn JavaScript deaktiviert ist, und der Stil folgt dem\ndie helle oder dunkle Farbgebung des Besuchers."
+
+msgid "Source code and bug reports live on GitHub: https://github.com/wppoland/plogins-answers"
+msgstr "Quellcode und Fehlerberichte live auf GitHub: https://github.com/wppoland/plogins-answers"
+
+msgid "* <strong>Documentation</strong> - https://plogins.com/plogins-answers/docs/\n* <strong>Plugin page</strong> - https://plogins.com/plogins-answers/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-answers\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-answers/issues"
+msgstr "* <strong>Dokumentation</strong> - https://plogins.com/de/plogins-answers/docs/\n* <strong>Plugin-Seite</strong> - https://plogins.com/de/plogins-answers/\n* <strong>Quellcode</strong> – https://github.com/wppoland/plogins-answers\n* <strong>Fehlerberichte und Funktionsanfragen</strong> – https://github.com/wppoland/plogins-answers/issues"
+
+msgid "* Per-product FAQ items, authored in a \"FAQs\" product data tab.\n* Accordion built from a `<button>` plus an `aria`-labelled region: keyboard operable, visible focus ring, `aria-expanded` kept in sync.\n* Shows in its own \"FAQs\" product-information tab; the tab label is editable.\n* Answers accept basic HTML, sanitised with `wp_kses_post` on save and again on output.\n* CSS custom properties for theming, a dark-scheme palette, and motion that respects `prefers-reduced-motion`.\n* Front-end assets load only on product pages that actually have FAQs.\n* Translation ready (POT included), and removes its options on uninstall.\n* Declares HPOS and cart/checkout blocks compatibility."
+msgstr "* FAQ-Elemente pro Produkt, erstellt in einer Produktdatenregisterkarte „FAQs“.\n* Akkordeon aufgebaut aus einem „<button>“ und einem mit „aria“ gekennzeichneten Bereich: Tastatur bedienbar, sichtbarer Fokusring, „aria-expanded“ synchron gehalten.\n* Wird in einem eigenen Produktinformations-Tab „FAQs“ angezeigt; Die Registerkartenbeschriftung kann bearbeitet werden.\n* Antworten akzeptieren einfaches HTML, bereinigt mit „wp_kses_post“ beim Speichern und erneut bei der Ausgabe.\n* Benutzerdefinierte CSS-Eigenschaften für das Design, eine dunkle Schemapalette und Bewegung, die „prefers-reduced-motion“ berücksichtigt.\n* Frontend-Assets werden nur auf Produktseiten geladen, die tatsächlich FAQs enthalten.\n* Übersetzungsbereit (POT enthalten) und entfernt seine Optionen bei der Deinstallation.\n* Erklärt die Kompatibilität von HPOS und Warenkorb-/Checkout-Blöcken."
+
+msgid "1. Upload the plugin to `/wp-content/plugins/answers`, or install via Plugins → Add New.\n2. Activate it. WooCommerce must be active.\n3. Edit a product and open the <strong>FAQs<strong> tab to add questions. 4. Rename the FAQ tab under </strong>WooCommerce → Answers</strong> if you like."
+msgstr "1. Lade das Plugin nach „/wp-content/plugins/answers“ hoch oder installiere es über Plugins → Neu hinzufügen.\n2. Aktiviere es. WooCommerce muss aktiv sein.\n3. Bearbeite ein Produkt und öffne die Registerkarte <strong>FAQs<strong>, um Fragen hinzuzufügen. 4. Benenne die Registerkarte „FAQ“ unter </strong>WooCommerce → Antworten</strong> um, wenn du möchten."
+
+msgid "Yes. WooCommerce must be installed and active."
+msgstr "Ja. WooCommerce muss installiert und aktiv sein."
+
+msgid "In a dedicated \"FAQs\" product-information tab on the single product page."
+msgstr "In einem speziellen „FAQs“-Produktinformations-Tab auf der einzelnen Produktseite."
+
+msgid "Yes. Each question is a button with `aria-expanded` controlling an `aria`-labelled\nregion, it is keyboard operable, has visible focus, and respects reduced-motion."
+msgstr "Ja. Bei jeder Frage handelt es sich um eine Schaltfläche mit der Bezeichnung „aria-expanded“, die eine mit „aria“ gekennzeichnete Frage steuert\nIn der Region ist es über die Tastatur bedienbar, hat einen sichtbaren Fokus und respektiert reduzierte Bewegungen."
+
+msgid "Basic HTML allowed by `wp_kses_post` (links, lists, emphasis). Scripts are stripped on save and output."
+msgstr "Grundlegendes HTML, das von „wp_kses_post“ zugelassen wird (Links, Listen, Hervorhebung). Skripte werden beim Speichern und bei der Ausgabe entfernt."
+
+msgid "No. CSS and JS load only on products that have at least one FAQ saved."
+msgstr "Nein. CSS und JS werden nur bei Produkten geladen, bei denen mindestens eine FAQ gespeichert ist."
+
+msgid "Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data."
+msgstr "Ja. Dieses Plugin ist mit WordPress Multisite kompatibel. Aktiviere es im Netzwerk oder auf einzelnen Websites. Jede Site behält ihre eigenen Einstellungen und Daten."
+
+msgid "1. The FAQ accordion on a product page.\n2. The per-product FAQs tab in the product data panel.\n3. The Answers settings screen under WooCommerce."
+msgstr "1. Das FAQ-Akkordeon auf einer Produktseite.\n2. Die Registerkarte „FAQs“ pro Produkt im Produktdatenbereich.\n3. Der Antwort-Einstellungsbildschirm unter WooCommerce."
+
+msgid "Answers does not connect to any external service. It makes no outbound HTTP\nrequests, and loads no third-party scripts, fonts, or stylesheets; its CSS and\nJavaScript are served from the plugin folder only. The FAQ content you write is\nstored entirely on your own site: per-product items in the `_answers_faqs` post\nmeta and plugin settings in the `answers_settings` option (with a schema marker\nin `answers_db_version`). Nothing is sent off-site, and the plugin sends no email."
+msgstr "Answers stellt keine Verbindung zu externen Diensten her. Es erfolgt kein ausgehendes HTTP\nfordert und lädt keine Skripte, Schriftarten oder Stylesheets von Drittanbietern; sein CSS und\nJavaScript wird nur aus dem Plugin-Ordner bereitgestellt. Der FAQ-Inhalt, den du schreiben, ist\nvollständig auf deiner eigenen Website gespeichert: Artikel pro Produkt im Beitrag „_answers_faqs“.\nMeta- und Plugin-Einstellungen in der Option „answers_settings“ (mit einer Schemamarkierung\nin `answers_db_version`). Es wird nichts an einen externen Standort gesendet und das Plugin sendet keine E-Mails."
+
+msgid "* First stable release."
+msgstr "* Erste stabile Version."
+
+msgid "* Renamed to Plogins Answers for WooCommerce for a more distinctive plugin name."
+msgstr "* Für einen eindeutigeren Plugin-Namen in Plogins Answers for WooCommerce umbenannt."
+
+msgid "* Optional `category` field on FAQ items for Answers Pro grouping.\n* Repeater hooks: `answers/faq_repeater_after_answer` and `answers/faq_repeater_sanitize_row`.\n* Storefront items expose `data-faq-category` when a category is set."
+msgstr "* Optionales „Kategorie“-Feld für FAQ-Elemente für die Answers Pro-Gruppierung.\n* Repeater-Hooks: „answers/faq_repeater_after_answer“ und „answers/faq_repeater_sanitize_row“.\n* Storefront-Elemente stellen „data-faq-category“ bereit, wenn eine Kategorie festgelegt ist."
+
+msgid "* Extension hooks for Answers Pro voting: stable FAQ keys, `answers/faq_items`,\n  and `answers/faq_after_answer`."
+msgstr "* Erweiterungs-Hooks für Answers Pro-Abstimmungen: stabile FAQ-Schlüssel, „answers/faq_items“,\n  und „answers/faq_after_answer“."
+
+msgid "* Initial release: per-product FAQs and an accessible accordion in a \"FAQs\" product tab."
+msgstr "* Erstveröffentlichung: FAQs pro Produkt und ein zugängliches Akkordeon in einer Produktregisterkarte „FAQs“."
+
