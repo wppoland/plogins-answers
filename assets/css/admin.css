@@ -180,32 +180,3 @@
 	margin-block: 0 0.75rem !important;
 	color: var(--answers-a-muted, #646970);
 }
-
-@media ( prefers-color-scheme: dark ) {
-	.answers-admin {
-		--answers-a-card-bg: #1d2327;
-		--answers-a-card-border: #3c434a;
-		--answers-a-muted: #c3c4c7;
-		/* Dark: storefront amber-light, 7.57:1 on #1d2327 card (AA pass). */
-		--answers-a-accent: #f4a13c;
-		--answers-a-accent-ink: #fbbf60;
-	}
-
-	.answers-admin .answers-intro h2,
-	.answers-admin .answers-card h2 {
-		color: #f0f0f1;
-	}
-
-	.answers-admin .answers-intro p,
-	.answers-admin .answers-card {
-		color: #f0f0f1;
-	}
-
-	.answers-admin .answers-preview__tab {
-		background: #2a2f35;
-	}
-
-	.answers-admin .answers-preview__tab--active {
-		background: var(--answers-a-card-bg);
-	}
-}
