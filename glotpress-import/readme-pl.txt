@@ -4,116 +4,108 @@ Tags: woocommerce, faq, product faq, accordion
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Wymaga wtyczek: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Dodaj często zadawane pytania dotyczące poszczególnych produktów jako dostępny akordeon, aby zmniejszyć liczbę pytań przedsprzedażowych.
+Dodaj sekcję FAQ dla poszczególnych produktów w formie dostępnego akordeonu, aby zmniejszyć liczbę pytań przedsprzedażowych.
 
 == Description ==
 
-Answers dodaje sekcję często zadawanych pytań do Twoich produktów WooCommerce,
-dzięki czemu kupujący mogą zamiast tego przeczytać typowe pytania przedsprzedażowe na stronie produktu
-napisz e-mail z zapytaniem.
+Answers dodaje do Twoich produktów WooCommerce sekcję z często zadawanymi pytaniami, dzięki czemu kupujący mogą przeczytać typowe pytania przedsprzedażowe na stronie produktu, zamiast pytać e-mailem.
 
-Często zadawane pytania piszesz w zakładce „FAQ” w panelu danych produktu WooCommerce, używając
-powtarzacz pytań/odpowiedzi. Pojawiają się one w osobnej zakładce „FAQ” na singlu
-stronie produktu, obok Opisu i Recenzji.
+Często zadawane pytania piszesz w zakładce „FAQ” w panelu Dane produktu WooCommerce za pomocą powtarzalnego pola pytanie/odpowiedź. Pojawiają się w osobnej zakładce „FAQ” na stronie pojedynczego produktu, obok Opisu i Opinii.
 
-Często zadawane pytania na początku to <strong>przystępny akordeon</strong>. Każde pytanie jest prawdziwe
-`<button>` z `aria-expanded` kontrolującym region oznaczony `aria`, więc działa
-za pomocą klawiatury i jest poprawnie ogłaszany przez czytniki ekranu. Panele otwarte i
-zamknij ze zmianą wysokości, która jest wyłączona w opcji „preferuje-ograniczony-ruch”,
-tekst odpowiedzi pozostaje dostępny, gdy JavaScript jest wyłączony, a styl jest zgodny z
-jasna lub ciemna kolorystyka odwiedzającego.
+Front-endowe FAQ to <strong>dostępny akordeon</strong>. Każde pytanie to prawdziwy `<button>` z atrybutem `aria-expanded` sterującym regionem oznaczonym przez `aria`, więc działa z klawiatury i jest poprawnie odczytywany przez czytniki ekranu. Panele otwierają się i zamykają płynną animacją wysokości, która jest wyłączana przy `prefers-reduced-motion`; tekst odpowiedzi pozostaje dostępny, gdy JavaScript jest wyłączony, a wygląd dostosowuje się do jasnego lub ciemnego schematu kolorów odwiedzającego.
 
-Kod źródłowy i raporty o błędach dostępne na GitHubie: https://github.com/wppoland/plogins-answers
+Kod źródłowy i zgłoszenia błędów znajdziesz na GitHubie: https://github.com/wppoland/plogins-answers
 
 = Documentation and links =
 
 * <strong>Dokumentacja</strong> - https://plogins.com/pl/plogins-answers/docs/
 * <strong>Strona wtyczki</strong> - https://plogins.com/pl/plogins-answers/
 * <strong>Kod źródłowy</strong> - https://github.com/wppoland/plogins-answers
-* <strong>Raporty o błędach i prośby o nowe funkcje</strong> - https://github.com/wppoland/plogins-answers/issues
+* <strong>Zgłoszenia błędów i propozycje funkcji</strong> - https://github.com/wppoland/plogins-answers/issues
 
 
 = Features =
 
-* Często zadawane pytania dotyczące poszczególnych produktów, utworzone w zakładce danych produktów „FAQ”.
-* Akordeon zbudowany z „<przycisku>” i regionu oznaczonego „aria”: obsługiwany klawiaturą, widoczny pierścień ostrości, „rozszerzona aria” zsynchronizowana.
-* Wyświetla się w osobnej zakładce z informacjami o produkcie „FAQ”; etykietę karty można edytować.
-* Odpowiedzi akceptują podstawowy kod HTML, oczyszczany za pomocą `wp_kses_post` przy zapisywaniu i ponownie przy wyjściu.
-* Niestandardowe właściwości CSS dotyczące motywów, palety ciemnego schematu i ruchu, które uwzględniają opcję „preferuje zredukowany ruch”.
-* Zasoby frontonu ładują się tylko na stronach produktów, które faktycznie zawierają często zadawane pytania.
-* Gotowe do tłumaczenia (w tym POT) i usuwa jego opcje po odinstalowaniu.
-* Deklaruje kompatybilność HPOS i bloków koszyka/kasy.
+* Elementy FAQ dla poszczególnych produktów, tworzone w zakładce danych produktu „FAQ”.
+* Akordeon zbudowany z elementu `<button>` i regionu oznaczonego przez `aria`: obsługa z klawiatury, widoczny pierścień fokusu, `aria-expanded` utrzymywany w synchronizacji.
+* Wyświetlany w osobnej zakładce z informacjami o produkcie „FAQ”; etykietę zakładki można edytować.
+* Odpowiedzi przyjmują podstawowy HTML, oczyszczany przez `wp_kses_post` przy zapisie i ponownie przy wyświetlaniu.
+* Właściwości niestandardowe CSS do stylizacji, paleta trybu ciemnego oraz animacje uwzględniające `prefers-reduced-motion`.
+* Zasoby front-endu ładują się tylko na stronach produktów, które faktycznie mają FAQ.
+* Gotowy do tłumaczenia (dołączony plik POT); usuwa swoje opcje przy odinstalowaniu.
+* Deklaruje zgodność z HPOS oraz blokami koszyka/kasy.
 
 == Installation ==
 
-1. Prześlij wtyczkę do `/wp-content/plugins/answers` lub zainstaluj poprzez Wtyczki → Dodaj nową.
-2. Aktywuj. WooCommerce musi być aktywny.
-3. Edytuj produkt i otwórz zakładkę <strong>FAQs<strong>, aby dodać pytania. 4. Jeśli chcesz, zmień nazwę zakładki FAQ w sekcji </strong>WooCommerce → Odpowiedzi</strong>.
+1. Wgraj wtyczkę do `/wp-content/plugins/answers` lub zainstaluj przez Wtyczki → Dodaj nową.
+2. Włącz ją. WooCommerce musi być aktywne.
+3. Edytuj produkt i otwórz zakładkę <strong>FAQs</strong>, aby dodać pytania.
+4. Jeśli chcesz, zmień nazwę zakładki FAQ w <strong>WooCommerce → Answers</strong>.
 
 == Frequently Asked Questions ==
 
 = Does it require WooCommerce? =
 
-Tak. WooCommerce musi być zainstalowany i aktywny.
+Tak. WooCommerce musi być zainstalowane i aktywne.
 
 = Where do FAQs appear? =
 
-W dedykowanej zakładce „FAQ” z informacjami o produkcie na stronie pojedynczego produktu.
+W dedykowanej zakładce z informacjami o produkcie „FAQ” na stronie pojedynczego produktu.
 
 = Is the accordion accessible? =
 
-Tak. Każde pytanie to przycisk z rozwiniętą arią, kontrolujący etykietę z etykietą „aria”.
-regionie, można go obsługiwać za pomocą klawiatury, ma widoczną ostrość i uwzględnia ograniczenie ruchu.
+Tak. Każde pytanie to przycisk z atrybutem `aria-expanded` sterującym regionem oznaczonym przez `aria`; można go obsługiwać z klawiatury, ma widoczny fokus i uwzględnia ograniczony ruch.
 
 = Can I use HTML in answers? =
 
-Podstawowy HTML dozwolony przez `wp_kses_post` (linki, listy, podkreślenia). Skrypty są usuwane przy zapisywaniu i wyjściu.
+Podstawowy HTML dozwolony przez `wp_kses_post` (linki, listy, wyróżnienia). Skrypty są usuwane przy zapisie i przy wyświetlaniu.
 
 = Does it load assets on every product page? =
 
-Nie. CSS i JS ładują się tylko w przypadku produktów, które mają zapisany przynajmniej jeden FAQ.
+Nie. CSS i JS ładują się tylko dla produktów, które mają zapisane co najmniej jedno FAQ.
 
 
 = Does this plugin work on WordPress Multisite? =
 
-Tak. Ta wtyczka jest kompatybilna z WordPress Multisite. Aktywuj go w sieci lub aktywuj na poszczególnych stronach; każda witryna przechowuje własne ustawienia i dane.
+Tak. Ta wtyczka jest zgodna z WordPress Multisite. Włącz ją dla całej sieci lub w pojedynczych witrynach; każda witryna zachowuje własne ustawienia i dane.
 
 == Screenshots ==
 
 1. Akordeon FAQ na stronie produktu.
-2. Zakładka Często zadawane pytania dotyczące poszczególnych produktów w panelu danych produktu.
-3. Ekran ustawień Odpowiedzi w WooCommerce.
+2. Zakładka FAQ dla poszczególnych produktów w panelu danych produktu.
+3. Ekran ustawień Answers w WooCommerce.
 
 == External Services ==
 
-Answers nie łączy się z żadną usługą zewnętrzną. Nie tworzy wychodzącego protokołu HTTP
-żąda i nie ładuje żadnych skryptów, czcionek ani arkuszy stylów innych firm; jego CSS i
-JavaScript jest obsługiwany wyłącznie z folderu wtyczek. Treść FAQ, którą piszesz, to
-przechowywane w całości na Twojej stronie: pozycje poszczególnych produktów w poście `_answers_faqs`
-ustawienia meta i wtyczki w opcji `answers_settings` (ze znacznikiem schematu
-w `answers_db_version`). Nic nie jest wysyłane poza witrynę, a wtyczka nie wysyła wiadomości e-mail.
+Answers nie łączy się z żadną usługą zewnętrzną. Nie wykonuje żadnych wychodzących żądań HTTP i nie ładuje żadnych skryptów, czcionek ani arkuszy stylów innych firm; jego pliki CSS i JavaScript są serwowane wyłącznie z folderu wtyczki. Treść FAQ, którą piszesz, jest przechowywana w całości w Twojej własnej witrynie: pozycje poszczególnych produktów w meta wpisu `_answers_faqs`, a ustawienia wtyczki w opcji `answers_settings` (ze znacznikiem schematu w `answers_db_version`). Nic nie jest wysyłane poza witrynę, a wtyczka nie wysyła e-maili.
+
+== Translations ==
+
+Plogins Answers zawiera polskie, niemieckie i hiszpańskie tłumaczenia interfejsu wtyczki. Domena tekstowa to `plogins-answers`, więc pakiety językowe z WordPress.org mogą również nadpisać lub rozszerzyć te dołączone tłumaczenia.
 
 == Changelog ==
+
+= 1.0.2 =
+* Dodano dołączone polskie, niemieckie i hiszpańskie tłumaczenia interfejsu wtyczki.
 
 = 1.0.1 =
 * Pierwsza stabilna wersja.
 
 = 0.1.3 =
-* Zmieniono nazwę na Plogins Answers dla WooCommerce, aby uzyskać bardziej charakterystyczną nazwę wtyczki.
+* Zmieniono nazwę na Plogins Answers dla WooCommerce, aby nazwa wtyczki była bardziej charakterystyczna.
 
 = 0.1.2 =
-* Opcjonalne pole „kategoria” w często zadawanych pytaniach dotyczących grupowania w Answers Pro.
-* Haki wzmacniające: `answers/faq_repeater_after_answer` i `answers/faq_repeater_sanitize_row`.
-* Pozycje sklepowe eksponują „kategorię danych-faq”, gdy kategoria jest ustawiona.
+* Opcjonalne pole `category` w elementach FAQ na potrzeby grupowania w Answers Pro.
+* Haki repeatera: `answers/faq_repeater_after_answer` oraz `answers/faq_repeater_sanitize_row`.
+* Elementy w sklepie udostępniają atrybut `data-faq-category`, gdy ustawiona jest kategoria.
 
 = 0.1.1 =
-* Haki rozszerzeń do głosowania w Answers Pro: stabilne klucze FAQ, `answers/faq_items`,
-  i „answers/faq_after_answer”.
+* Haki rozszerzeń do głosowania w Answers Pro: stabilne klucze FAQ, `answers/faq_items` oraz `answers/faq_after_answer`.
 
 = 0.1.0 =
-* Pierwsza wersja: często zadawane pytania dotyczące poszczególnych produktów i dostępny akordeon w zakładce produktu „FAQ”.
+* Pierwsze wydanie: często zadawane pytania dla poszczególnych produktów i dostępny akordeon w zakładce produktu „FAQ”.

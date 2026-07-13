@@ -4,56 +4,48 @@ Tags: woocommerce, faq, product faq, accordion
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Erfordert Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Füge FAQs pro Produkt als barrierefreies Akkordeon hinzu, um Fragen vor dem Verkauf zu reduzieren.
+Füge FAQs pro Produkt als barrierefreies Akkordeon hinzu, um Fragen vor dem Kauf zu reduzieren.
 
 == Description ==
 
-Answers fügt deinen WooCommerce-Produkten einen Abschnitt mit häufig gestellten Fragen hinzu.
-So können Käufer die häufigen Vorverkaufsfragen stattdessen auf der Produktseite lesen
-per E-Mail fragen.
+Answers fügt deinen WooCommerce-Produkten einen Bereich mit häufig gestellten Fragen hinzu, sodass die Kundschaft die gängigen Vorverkaufsfragen direkt auf der Produktseite lesen kann, statt per E-Mail nachzufragen.
 
-Du schreiben die FAQs in eine Registerkarte „FAQs“ im WooCommerce-Produktdatenbereich mit
-ein Frage/Antwort-Repeater. Du wirst auf der Single in ihrem eigenen Tab „FAQs“ angezeigt
-Produktseite neben Beschreibung und Rezensionen.
+Die FAQs schreibst du in einem Tab „FAQs“ im WooCommerce-Produktdaten-Bereich über ein Frage/Antwort-Repeater-Feld. Sie erscheinen in einem eigenen Tab „FAQs“ auf der einzelnen Produktseite, neben Beschreibung und Bewertungen.
 
-Die Front-End-FAQs sind ein <strong>zugängliches Akkordeon</strong>. Jede Frage ist eine echte
-`<button>` mit `aria-expanded` steuert eine mit `aria` gekennzeichnete Region, also funktioniert es
-mit der Tastatur und wird von Screenreadern korrekt angesagt. Panels öffnen und
-schließen mit einem Höhenübergang, der unter „prefers-reduced-motion“ ausgeschaltet ist,
-Der Antworttext bleibt erreichbar, wenn JavaScript deaktiviert ist, und der Stil folgt dem
-die helle oder dunkle Farbgebung des Besuchers.
+Die Frontend-FAQs sind ein <strong>barrierefreies Akkordeon</strong>. Jede Frage ist ein echter `<button>` mit `aria-expanded`, das eine mit `aria` beschriftete Region steuert, sodass es sich mit der Tastatur bedienen lässt und von Screenreadern korrekt angesagt wird. Panels öffnen und schließen mit einem Höhenübergang, der bei `prefers-reduced-motion` abgeschaltet wird; der Antworttext bleibt erreichbar, wenn JavaScript deaktiviert ist, und das Styling folgt dem hellen oder dunklen Farbschema des Besuchers.
 
-Quellcode und Fehlerberichte live auf GitHub: https://github.com/wppoland/plogins-answers
+Quellcode und Fehlerberichte findest du auf GitHub: https://github.com/wppoland/plogins-answers
 
 = Documentation and links =
 
 * <strong>Dokumentation</strong> - https://plogins.com/de/plogins-answers/docs/
 * <strong>Plugin-Seite</strong> - https://plogins.com/de/plogins-answers/
-* <strong>Quellcode</strong> – https://github.com/wppoland/plogins-answers
-* <strong>Fehlerberichte und Funktionsanfragen</strong> – https://github.com/wppoland/plogins-answers/issues
+* <strong>Quellcode</strong> - https://github.com/wppoland/plogins-answers
+* <strong>Fehlerberichte und Funktionswünsche</strong> - https://github.com/wppoland/plogins-answers/issues
 
 
 = Features =
 
-* FAQ-Elemente pro Produkt, erstellt in einer Produktdatenregisterkarte „FAQs“.
-* Akkordeon aufgebaut aus einem „<button>“ und einem mit „aria“ gekennzeichneten Bereich: Tastatur bedienbar, sichtbarer Fokusring, „aria-expanded“ synchron gehalten.
-* Wird in einem eigenen Produktinformations-Tab „FAQs“ angezeigt; Die Registerkartenbeschriftung kann bearbeitet werden.
-* Antworten akzeptieren einfaches HTML, bereinigt mit „wp_kses_post“ beim Speichern und erneut bei der Ausgabe.
-* Benutzerdefinierte CSS-Eigenschaften für das Design, eine dunkle Schemapalette und Bewegung, die „prefers-reduced-motion“ berücksichtigt.
-* Frontend-Assets werden nur auf Produktseiten geladen, die tatsächlich FAQs enthalten.
+* FAQ-Einträge pro Produkt, erstellt in einem Produktdaten-Tab „FAQs“.
+* Akkordeon aus einem `<button>` plus einer mit `aria` beschrifteten Region: per Tastatur bedienbar, sichtbarer Fokusring, `aria-expanded` bleibt synchron.
+* Wird in einem eigenen Produktinformations-Tab „FAQs“ angezeigt; die Tab-Beschriftung ist bearbeitbar.
+* Antworten akzeptieren einfaches HTML, bereinigt mit `wp_kses_post` beim Speichern und erneut bei der Ausgabe.
+* CSS-Custom-Properties fürs Theming, eine Dark-Mode-Palette und Bewegung, die `prefers-reduced-motion` berücksichtigt.
+* Frontend-Assets werden nur auf Produktseiten geladen, die tatsächlich FAQs haben.
 * Übersetzungsbereit (POT enthalten) und entfernt seine Optionen bei der Deinstallation.
-* Erklärt die Kompatibilität von HPOS und Warenkorb-/Checkout-Blöcken.
+* Deklariert Kompatibilität mit HPOS und den Warenkorb-/Kassen-Blöcken.
 
 == Installation ==
 
-1. Lade das Plugin nach „/wp-content/plugins/answers“ hoch oder installiere es über Plugins → Neu hinzufügen.
+1. Lade das Plugin nach `/wp-content/plugins/answers` hoch oder installiere es über Plugins → Installieren.
 2. Aktiviere es. WooCommerce muss aktiv sein.
-3. Bearbeite ein Produkt und öffne die Registerkarte <strong>FAQs<strong>, um Fragen hinzuzufügen. 4. Benenne die Registerkarte „FAQ“ unter </strong>WooCommerce → Antworten</strong> um, wenn du möchten.
+3. Bearbeite ein Produkt und öffne den Tab <strong>FAQs</strong>, um Fragen hinzuzufügen.
+4. Benenne den FAQ-Tab unter <strong>WooCommerce → Answers</strong> um, wenn du möchtest.
 
 == Frequently Asked Questions ==
 
@@ -63,16 +55,15 @@ Ja. WooCommerce muss installiert und aktiv sein.
 
 = Where do FAQs appear? =
 
-In einem speziellen „FAQs“-Produktinformations-Tab auf der einzelnen Produktseite.
+In einem eigenen Produktinformations-Tab „FAQs“ auf der einzelnen Produktseite.
 
 = Is the accordion accessible? =
 
-Ja. Bei jeder Frage handelt es sich um eine Schaltfläche mit der Bezeichnung „aria-expanded“, die eine mit „aria“ gekennzeichnete Frage steuert
-In der Region ist es über die Tastatur bedienbar, hat einen sichtbaren Fokus und respektiert reduzierte Bewegungen.
+Ja. Jede Frage ist ein Button mit `aria-expanded`, das eine mit `aria` beschriftete Region steuert; er ist per Tastatur bedienbar, hat einen sichtbaren Fokus und berücksichtigt reduzierte Bewegung.
 
 = Can I use HTML in answers? =
 
-Grundlegendes HTML, das von „wp_kses_post“ zugelassen wird (Links, Listen, Hervorhebung). Skripte werden beim Speichern und bei der Ausgabe entfernt.
+Einfaches HTML, das `wp_kses_post` erlaubt (Links, Listen, Hervorhebungen). Skripte werden beim Speichern und bei der Ausgabe entfernt.
 
 = Does it load assets on every product page? =
 
@@ -81,39 +72,40 @@ Nein. CSS und JS werden nur bei Produkten geladen, bei denen mindestens eine FAQ
 
 = Does this plugin work on WordPress Multisite? =
 
-Ja. Dieses Plugin ist mit WordPress Multisite kompatibel. Aktiviere es im Netzwerk oder auf einzelnen Websites. Jede Site behält ihre eigenen Einstellungen und Daten.
+Ja. Dieses Plugin ist mit WordPress Multisite kompatibel. Aktiviere es netzwerkweit oder auf einzelnen Websites; jede Website behält ihre eigenen Einstellungen und Daten.
 
 == Screenshots ==
 
 1. Das FAQ-Akkordeon auf einer Produktseite.
-2. Die Registerkarte „FAQs“ pro Produkt im Produktdatenbereich.
-3. Der Antwort-Einstellungsbildschirm unter WooCommerce.
+2. Der FAQ-Tab pro Produkt im Produktdaten-Bereich.
+3. Der Answers-Einstellungsbildschirm unter WooCommerce.
 
 == External Services ==
 
-Answers stellt keine Verbindung zu externen Diensten her. Es erfolgt kein ausgehendes HTTP
-fordert und lädt keine Skripte, Schriftarten oder Stylesheets von Drittanbietern; sein CSS und
-JavaScript wird nur aus dem Plugin-Ordner bereitgestellt. Der FAQ-Inhalt, den du schreiben, ist
-vollständig auf deiner eigenen Website gespeichert: Artikel pro Produkt im Beitrag „_answers_faqs“.
-Meta- und Plugin-Einstellungen in der Option „answers_settings“ (mit einer Schemamarkierung
-in `answers_db_version`). Es wird nichts an einen externen Standort gesendet und das Plugin sendet keine E-Mails.
+Answers stellt keine Verbindung zu externen Diensten her. Es sendet keine ausgehenden HTTP-Anfragen und lädt keine Skripte, Schriftarten oder Stylesheets von Drittanbietern; sein CSS und JavaScript werden nur aus dem Plugin-Ordner ausgeliefert. Die FAQ-Inhalte, die du schreibst, werden vollständig auf deiner eigenen Website gespeichert: Einträge pro Produkt im Post-Meta `_answers_faqs` und die Plugin-Einstellungen in der Option `answers_settings` (mit einer Schema-Markierung in `answers_db_version`). Es wird nichts nach außen gesendet, und das Plugin sendet keine E-Mails.
+
+== Translations ==
+
+Plogins Answers enthält polnische, deutsche und spanische Übersetzungen für die Plugin-Oberfläche. Die Textdomain ist `plogins-answers`, sodass Sprachpakete von WordPress.org diese mitgelieferten Übersetzungen ebenfalls überschreiben oder erweitern können.
 
 == Changelog ==
+
+= 1.0.2 =
+* Mitgelieferte polnische, deutsche und spanische Übersetzungen für die Plugin-Oberfläche hinzugefügt.
 
 = 1.0.1 =
 * Erste stabile Version.
 
 = 0.1.3 =
-* Für einen eindeutigeren Plugin-Namen in Plogins Answers for WooCommerce umbenannt.
+* In Plogins Answers für WooCommerce umbenannt, für einen eindeutigeren Plugin-Namen.
 
 = 0.1.2 =
-* Optionales „Kategorie“-Feld für FAQ-Elemente für die Answers Pro-Gruppierung.
-* Repeater-Hooks: „answers/faq_repeater_after_answer“ und „answers/faq_repeater_sanitize_row“.
-* Storefront-Elemente stellen „data-faq-category“ bereit, wenn eine Kategorie festgelegt ist.
+* Optionales Feld `category` bei FAQ-Einträgen für die Gruppierung in Answers Pro.
+* Repeater-Hooks: `answers/faq_repeater_after_answer` und `answers/faq_repeater_sanitize_row`.
+* Shop-Einträge stellen `data-faq-category` bereit, wenn eine Kategorie gesetzt ist.
 
 = 0.1.1 =
-* Erweiterungs-Hooks für Answers Pro-Abstimmungen: stabile FAQ-Schlüssel, „answers/faq_items“,
-  und „answers/faq_after_answer“.
+* Erweiterungs-Hooks für das Voting in Answers Pro: stabile FAQ-Schlüssel, `answers/faq_items` und `answers/faq_after_answer`.
 
 = 0.1.0 =
-* Erstveröffentlichung: FAQs pro Produkt und ein zugängliches Akkordeon in einer Produktregisterkarte „FAQs“.
+* Erstveröffentlichung: FAQs pro Produkt und ein barrierefreies Akkordeon in einem Produkt-Tab „FAQs“.
