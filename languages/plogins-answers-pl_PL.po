@@ -6,15 +6,14 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/answers\n"
 "POT-Creation-Date: 2026-06-16T20:23:47+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
-"Last-Translator: WPPoland <kontakt@wppoland.com>\n"
+"Last-Translator: wppoland.com <hello@wppoland.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
 "X-Domain: plogins-answers\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && "
-"(n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
 
 #. Plugin Name of the plugin
 #: answers.php
@@ -29,7 +28,8 @@ msgstr "https://plogins.com/answers/"
 #. Description of the plugin
 #: answers.php
 msgid ""
-"Add per-product FAQs as an accessible accordion to reduce pre-sale questions."
+"Add per-product FAQs as an accessible accordion to reduce pre-sale "
+"questions."
 msgstr ""
 "Dodaj FAQ osobno dla każdego produktu jako dostępny akordeon i ogranicz "
 "liczbę pytań przed zakupem."
