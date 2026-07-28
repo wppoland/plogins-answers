@@ -1,7 +1,7 @@
 <?php
 /**
  * Service wiring. Returns a closure that registers every service in the
- * container. This plugin is self-contained — all FAQ logic lives in these
+ * container. This plugin is self-contained, all FAQ logic lives in these
  * services; there is no external runtime dependency.
  *
  * @package Answers
