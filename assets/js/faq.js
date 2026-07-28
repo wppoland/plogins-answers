@@ -1,5 +1,5 @@
 /**
- * Answers — storefront FAQ accordion behaviour (progressive, dependency-free).
+ * Answers, storefront FAQ accordion behaviour (progressive, dependency-free).
  *
  * Each question is a <button aria-expanded aria-controls> controlling a region
  * panel. Clicking (or Enter/Space, native to <button>) toggles the panel and
