@@ -7,19 +7,18 @@ msgstr ""
 "POT-Creation-Date: 2026-06-16T20:23:47+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
-"Language-Team: Polish <pl@li.org>\n"
-"Language: pl_PL\n"
+"Language-Team: German <de@li.org>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && "
-"(n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: plogins-answers\n"
 
 #. Plugin Name of the plugin
 #: answers.php
 msgid "Answers - Product FAQs for WooCommerce"
-msgstr "Answers - FAQ produktów dla WooCommerce"
+msgstr "Answers - Produkt-FAQs für WooCommerce"
 
 #. Plugin URI of the plugin
 #: answers.php
@@ -31,8 +30,8 @@ msgstr "https://plogins.com/answers/"
 msgid ""
 "Add per-product FAQs as an accessible accordion to reduce pre-sale questions."
 msgstr ""
-"Dodaj FAQ osobno dla każdego produktu jako dostępny akordeon i ogranicz "
-"liczbę pytań przed zakupem."
+"Füge produktbezogene FAQs als barrierefreies Akkordeon hinzu, um Fragen vor "
+"dem Kauf zu reduzieren."
 
 #. Author of the plugin
 #: answers.php
@@ -47,65 +46,67 @@ msgstr "https://plogins.com/"
 #: answers.php:47
 msgid ""
 "Answers - Product FAQs for WooCommerce requires WooCommerce to be active."
-msgstr "Answers - FAQ produktów dla WooCommerce wymaga aktywnego WooCommerce."
+msgstr ""
+"Answers - Produkt-FAQs für WooCommerce erfordert, dass WooCommerce aktiv ist."
 
 #: src/Admin/FaqRepeater.php:47
 msgid "Add question"
-msgstr "Dodaj pytanie"
+msgstr "Frage hinzufügen"
 
 #: src/Admin/FaqRepeater.php:51
 msgid ""
 "Drag is not required, questions render in the order listed. Leave a row "
 "blank to remove it on save. Answers accept basic HTML (links, lists, bold)."
 msgstr ""
-"Przeciąganie nie jest wymagane, pytania wyświetlają się w podanej "
-"kolejności. Zostaw pusty wiersz, aby usunąć go przy zapisie. Odpowiedzi "
-"obsługują podstawowy HTML: linki, listy i pogrubienie."
+"Ziehen ist nicht erforderlich, die Fragen werden in der angegebenen "
+"Reihenfolge angezeigt. Lass eine Zeile leer, um sie beim Speichern zu "
+"entfernen. Antworten unterstützen einfaches HTML: Links, Listen und "
+"Fettdruck."
 
 #: src/Admin/FaqRepeater.php:70
 msgid "Question"
-msgstr "Pytanie"
+msgstr "Frage"
 
 #: src/Admin/FaqRepeater.php:76
 msgid "e.g. What is your return policy?"
-msgstr "np. Jaka jest Wasza polityka zwrotów?"
+msgstr "z.B. Wie lauten deine Rückgabebedingungen?"
 
 #: src/Admin/FaqRepeater.php:83
 msgid "Answer"
-msgstr "Odpowiedź"
+msgstr "Antwort"
 
 #: src/Admin/FaqRepeater.php:88
 msgid "Write a clear, concise answer. Basic HTML is allowed."
-msgstr "Napisz jasną i zwięzłą odpowiedź. Dozwolony jest podstawowy kod HTML."
+msgstr "Schreibe eine klare, kurze Antwort. Einfaches HTML ist erlaubt."
 
 #: src/Admin/FaqRepeater.php:93
 msgid "Remove this question"
-msgstr "Usuń to pytanie"
+msgstr "Diese Frage entfernen"
 
 #: src/Admin/ProductFaqTab.php:45 src/Admin/Settings.php:83
 #: src/Admin/Settings.php:135 src/Service/FaqRenderer.php:193
 msgid "FAQs"
-msgstr "Najczęstsze pytania"
+msgstr "FAQs"
 
 #: src/Admin/ProductFaqTab.php:65
 msgid ""
 "Add questions buyers ask before purchase. They render as an accessible "
 "accordion on the product page."
 msgstr ""
-"Dodaj pytania, które kupujący zadają przed zakupem. Na stronie produktu "
-"wyświetlą się jako dostępny akordeon."
+"Füge Fragen hinzu, die Käufer vor dem Kauf stellen. Du wirst auf der "
+"Produktseite als barrierefreies Akkordeon angezeigt."
 
 #: src/Admin/Settings.php:49
 msgid "Answers: Product FAQs"
-msgstr "Answers: FAQ produktów"
+msgstr "Antworten: Produkt-FAQs"
 
 #: src/Admin/Settings.php:50
 msgid "Answers"
-msgstr "Answers"
+msgstr "Antworten"
 
 #: src/Admin/Settings.php:91
 msgid "Answer buyer questions, right on the product page"
-msgstr "Odpowiadaj na pytania kupujących bezpośrednio na stronie produktu"
+msgstr "Beantworte Käuferfragen direkt auf der Produktseite"
 
 #: src/Admin/Settings.php:93
 msgid ""
@@ -113,13 +114,13 @@ msgid ""
 "accessible, keyboard-friendly accordion in a \"FAQs\" tab on the product "
 "page."
 msgstr ""
-"Dodaj FAQ do produktu w zakładce danych „FAQs”. Na stronie produktu "
-"wyświetli się jako dostępny, wygodny dla klawiatury akordeon w zakładce "
-"„FAQs”."
+"Füge einem Produkt im Daten-Tab „FAQs“ Fragen und Antworten hinzu. Sie "
+"erscheinen auf der Produktseite als barrierefreies, tastaturfreundliches "
+"Akkordeon im Tab „FAQs“."
 
 #: src/Admin/Settings.php:102
 msgid "Display"
-msgstr "Wyświetlanie"
+msgstr "Anzeige"
 
 #: src/Admin/Settings.php:104
 msgid ""
@@ -127,27 +128,28 @@ msgid ""
 "With FAQs enabled, any product that has FAQ items gets the tab "
 "automatically, no per-product setup beyond authoring the questions."
 msgstr ""
-"Ustaw, czy zakładka FAQ ma pojawiać się na stronach produktów i jak ma się "
-"nazywać. Gdy FAQ jest włączone, każdy produkt z pytaniami otrzyma zakładkę "
-"automatycznie, bez dodatkowej konfiguracji poza wpisaniem pytań."
+"Steuere, ob der FAQ-Tab auf Produktseiten erscheint und wie er heißt. Wenn "
+"FAQs aktiviert sind, erhält jedes Produkt mit FAQ-Einträgen den Tab "
+"automatisch, ohne weitere produktspezifische Einrichtung außer dem Erstellen "
+"der Fragen."
 
 #: src/Admin/Settings.php:109
 msgid "Enable FAQs"
-msgstr "Włącz najczęstsze pytania"
+msgstr "FAQs aktivieren"
 
 #: src/Admin/Settings.php:119
 msgid "Show product FAQs on the storefront."
-msgstr "Wyświetlaj najczęstsze pytania o produkcie w sklepie."
+msgstr "Produkt-FAQs im Shop anzeigen."
 
 #: src/Admin/Settings.php:121
 msgid "When off, no FAQs render and the FAQ stylesheet is not loaded."
 msgstr ""
-"Gdy opcja jest wyłączona, FAQ nie jest wyświetlane, a arkusz stylów FAQ nie "
-"jest ładowany."
+"Wenn diese Option deaktiviert ist, werden keine FAQs gerendert und das FAQ-"
+"Stylesheet wird nicht geladen."
 
 #: src/Admin/Settings.php:126
 msgid "Tab title"
-msgstr "Tytuł zakładki"
+msgstr "Tab-Titel"
 
 #. translators: %s: the tab label currently in effect, e.g. "FAQs".
 #: src/Admin/Settings.php:141
@@ -156,77 +158,78 @@ msgid ""
 "Sets the tab label shoppers see next to \"Description\" and \"Reviews\". "
 "Leave blank to use \"FAQs\". Currently showing: %s"
 msgstr ""
-"Ustawia etykietę zakładki widoczną obok „Opis” i „Recenzje”. Zostaw puste, "
-"aby użyć „FAQs”. Aktualnie wyświetlane: %s"
+"Legt die Registerkartenbezeichnung fest, die Käufer neben „Beschreibung“ und "
+"„Bewertungen“ sehen. Lass das Feld leer, um „FAQs“ zu verwenden. Derzeit "
+"angezeigt: %s"
 
 #: src/Admin/Settings.php:152
 msgid "Preview, how the product-page tabs read:"
-msgstr "Podgląd, jak wyglądają zakładki na stronie produktu:"
+msgstr "Vorschau der Produktseiten-Tabs:"
 
 #: src/Admin/Settings.php:154
 msgid "Description"
-msgstr "Opis"
+msgstr "Beschreibung"
 
 #: src/Admin/Settings.php:156
 msgid "Reviews"
-msgstr "Recenzje"
+msgstr "Rezensionen"
 
 #: src/Admin/ProUpsell.php:78
 msgid "Wkrótce"
-msgstr "Wkrótce"
+msgstr "Demnächst"
 
 #: src/Admin/ProUpsell.php:78
 msgid "Coming soon"
-msgstr "Wkrótce"
+msgstr "Demnächst"
 
 #. translators: %d: yearly price in PLN
 #: src/Admin/ProUpsell.php:83
 #, php-format
 msgid "od %d zł/rok"
-msgstr "od %d zł/rok"
+msgstr "ab %d zł/Jahr"
 
 #. translators: 1: currency symbol, 2: yearly price
 #: src/Admin/ProUpsell.php:88
 #, php-format
 msgid "from %1$s%2$d/yr"
-msgstr "od %1$s%2$d/rok"
+msgstr "ab %1$s%2$d/Jahr"
 
 #: src/Admin/ProUpsell.php:97
 msgid "Upgrade to PRO"
-msgstr "Przejdź na PRO"
+msgstr "Auf PRO upgraden"
 
 #: src/Admin/ProUpsell.php:98
 msgid "Powiadom mnie"
-msgstr "Powiadom mnie"
+msgstr "Benachrichtige mich"
 
 #: src/Admin/ProUpsell.php:98
 msgid "Get notified"
-msgstr "Powiadom mnie"
+msgstr "Benachrichtige mich"
 
 #: src/Admin/ProUpsell.php:128
 msgid "Permission denied."
-msgstr "Brak uprawnień."
+msgstr "Zugriff verweigert."
 
 #. translators: %s: PRO edition name
 #: src/Admin/ProUpsell.php:158
 #, php-format
 msgid "Do more with %s"
-msgstr "Zrób więcej dzięki %s"
+msgstr "Mehr erreichen mit %s"
 
 #: src/Admin/ProUpsell.php:165
 msgid "Dismiss this notice"
-msgstr "Odrzuć to powiadomienie"
+msgstr "Diesen Hinweis ausblenden"
 
 #: src/Admin/ProUpsell.php:182
 msgid "Unlock every PRO feature"
-msgstr "Odblokuj wszystkie funkcje PRO"
+msgstr "Alle PRO-Funktionen freischalten"
 
 #: src/Admin/ProUpsell.php:195
 msgid "one licence, every PRO feature"
-msgstr "jedna licencja, wszystkie funkcje PRO"
+msgstr "eine Lizenz, alle PRO-Funktionen"
 
 #. translators: %s: PRO edition name
 #: src/Admin/ProUpsell.php:214
 #, php-format
 msgid "What %s adds"
-msgstr "Co dodaje %s"
+msgstr "Was %s ergänzt"

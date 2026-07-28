@@ -1,5 +1,5 @@
 /**
- * Answers — storefront FAQ accordion.
+ * Answers, storefront FAQ accordion.
  *
  * Themeable via --answers-* custom properties (each falls back to a sensible
  * default, so a theme can re-skin the accordion by setting just one token).
@@ -8,7 +8,7 @@
  * source of truth for state, so the accordion is fully usable before the
  * (optional) enhancement script runs.
  *
- * Craft moment — the "highlighter sweep": this plugin's whole job is handing a
+ * Craft moment, the "highlighter sweep": this plugin's whole job is handing a
  * shopper the answer to their question. So the instant a question opens, a
  * translucent marigold highlighter band wipes once across the answer, the way
  * you'd reach into a manual and highlight the line that settles the question.
@@ -17,7 +17,7 @@
  */
 
 .answers-faq {
-	/* Marigold highlighter — the colour of marking the answer in a manual. */
+	/* Marigold highlighter, the colour of marking the answer in a manual. */
 	--answers-accent: #b45309;
 	--answers-accent-ink: #92400e;
 	--answers-highlight: rgba(245, 158, 11, 0.32);
@@ -87,7 +87,7 @@
 /*
  * The marker reads as a question, not a control. Closed: a "?" in the accent
  * ink, ringed like a margin note. Open: the ring fills and a "?" gives way to a
- * settled dot — the question, answered.
+ * settled dot, the question, answered.
  */
 .answers-faq__icon {
 	flex: 0 0 auto;
@@ -115,7 +115,7 @@
 }
 
 .answers-faq__trigger[aria-expanded="true"] .answers-faq__icon::before {
-	content: "\2022"; /* settled dot — question resolved */
+	content: "\2022"; /* settled dot, question resolved */
 }
 
 .answers-faq__panel {
@@ -149,7 +149,7 @@
 
 /*
  * The highlighter sweep. A translucent marigold band sits over the answer and
- * wipes once, left to right, when the panel opens — then clears, leaving the
+ * wipes once, left to right, when the panel opens, then clears, leaving the
  * answer plainly legible. Purely decorative, never intercepts pointer events.
  */
 .answers-faq__answer::before {

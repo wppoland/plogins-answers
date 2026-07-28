@@ -26,7 +26,8 @@ msgstr ""
 
 #. Description of the plugin
 #: answers.php
-msgid "Add per-product FAQs as an accessible accordion to reduce pre-sale questions."
+msgid ""
+"Add per-product FAQs as an accessible accordion to reduce pre-sale questions."
 msgstr ""
 
 #. Author of the plugin
@@ -40,7 +41,8 @@ msgid "https://plogins.com/"
 msgstr ""
 
 #: answers.php:47
-msgid "Answers - Product FAQs for WooCommerce requires WooCommerce to be active."
+msgid ""
+"Answers - Product FAQs for WooCommerce requires WooCommerce to be active."
 msgstr ""
 
 #: src/Admin/FaqRepeater.php:47
@@ -48,7 +50,9 @@ msgid "Add question"
 msgstr ""
 
 #: src/Admin/FaqRepeater.php:51
-msgid "Drag is not required, questions render in the order listed. Leave a row blank to remove it on save. Answers accept basic HTML (links, lists, bold)."
+msgid ""
+"Drag is not required, questions render in the order listed. Leave a row "
+"blank to remove it on save. Answers accept basic HTML (links, lists, bold)."
 msgstr ""
 
 #: src/Admin/FaqRepeater.php:70
@@ -71,15 +75,15 @@ msgstr ""
 msgid "Remove this question"
 msgstr ""
 
-#: src/Admin/ProductFaqTab.php:45
-#: src/Admin/Settings.php:83
-#: src/Admin/Settings.php:135
-#: src/Service/FaqRenderer.php:193
+#: src/Admin/ProductFaqTab.php:45 src/Admin/Settings.php:83
+#: src/Admin/Settings.php:135 src/Service/FaqRenderer.php:193
 msgid "FAQs"
 msgstr ""
 
 #: src/Admin/ProductFaqTab.php:65
-msgid "Add questions buyers ask before purchase. They render as an accessible accordion on the product page."
+msgid ""
+"Add questions buyers ask before purchase. They render as an accessible "
+"accordion on the product page."
 msgstr ""
 
 #: src/Admin/Settings.php:49
@@ -95,7 +99,10 @@ msgid "Answer buyer questions, right on the product page"
 msgstr ""
 
 #: src/Admin/Settings.php:93
-msgid "Add FAQs to a product in its \"FAQs\" data tab. They render as an accessible, keyboard-friendly accordion in a \"FAQs\" tab on the product page."
+msgid ""
+"Add FAQs to a product in its \"FAQs\" data tab. They render as an "
+"accessible, keyboard-friendly accordion in a \"FAQs\" tab on the product "
+"page."
 msgstr ""
 
 #: src/Admin/Settings.php:102
@@ -103,7 +110,10 @@ msgid "Display"
 msgstr ""
 
 #: src/Admin/Settings.php:104
-msgid "Control whether the FAQ tab appears on product pages and what it is called. With FAQs enabled, any product that has FAQ items gets the tab automatically, no per-product setup beyond authoring the questions."
+msgid ""
+"Control whether the FAQ tab appears on product pages and what it is called. "
+"With FAQs enabled, any product that has FAQ items gets the tab "
+"automatically, no per-product setup beyond authoring the questions."
 msgstr ""
 
 #: src/Admin/Settings.php:109
@@ -125,7 +135,9 @@ msgstr ""
 #. translators: %s: the tab label currently in effect, e.g. "FAQs".
 #: src/Admin/Settings.php:141
 #, php-format
-msgid "Sets the tab label shoppers see next to \"Description\" and \"Reviews\". Leave blank to use \"FAQs\". Currently showing: %s"
+msgid ""
+"Sets the tab label shoppers see next to \"Description\" and \"Reviews\". "
+"Leave blank to use \"FAQs\". Currently showing: %s"
 msgstr ""
 
 #: src/Admin/Settings.php:152
@@ -138,4 +150,64 @@ msgstr ""
 
 #: src/Admin/Settings.php:156
 msgid "Reviews"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr ""
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr ""
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
 msgstr ""
