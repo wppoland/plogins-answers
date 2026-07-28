@@ -1,5 +1,5 @@
 /**
- * Answers — admin styling for the settings screen and the product FAQ repeater.
+ * Answers, admin styling for the settings screen and the product FAQ repeater.
  * Tokens live under --answers-a-* so the look is tunable in one place. Colours
  * adapt to the admin colour scheme via prefers-color-scheme.
  */
@@ -181,49 +181,22 @@
 	color: var(--answers-a-muted, #646970);
 }
 
-@media ( prefers-color-scheme: dark ) {
-	.answers-admin {
-		--answers-a-card-bg: #1d2327;
-		--answers-a-card-border: #3c434a;
-		--answers-a-muted: #c3c4c7;
-		/* Dark: storefront amber-light, 7.57:1 on #1d2327 card (AA pass). */
-		--answers-a-accent: #f4a13c;
-		--answers-a-accent-ink: #fbbf60;
-	}
-
-	.answers-admin .answers-intro h2,
-	.answers-admin .answers-card h2 {
-		color: #f0f0f1;
-	}
-
-	.answers-admin .answers-intro p,
-	.answers-admin .answers-card {
-		color: #f0f0f1;
-	}
-
-	.answers-admin .answers-preview__tab {
-		background: #2a2f35;
-	}
-
-	.answers-admin .answers-preview__tab--active {
-		background: var(--answers-a-card-bg);
-	}
-}
-
-/* ------------------------------------------------------------------
- * PRO upsell — dismissible banner, sidebar promo, "what PRO adds"
- * locked cards. Pure advertising (no disabled inputs), scoped to
- * .answers-admin, using the plugin's own amber accent. Decorative
- * accents use the (dark-mode-flipping) --answers-a-accent; the CTA
- * buttons and text-coloured accents use the fixed dark amber
- * --answers-pro-cta (#92400e) so white text clears WCAG AA (7.09:1)
- * and the promo cards stay a light surface in both colour schemes.
+/* ------------------------------------------------------------------ *
+ * PRO upsell, dismissible banner, sidebar promo, "what PRO adds"
+ * locked cards. Pure advertising (no disabled inputs), scoped entirely
+ * to the .answers-admin settings wrapper so nothing leaks into wp-admin.
+ *
+ * Accent contrast (WCAG, computed):
+ *   Decorative accent  #b45309, borders, rules, lock glyphs (non-text).
+ *   Text/CTA accent    #92400e, white button text on it = 7.09:1 (AAA).
  * ------------------------------------------------------------------ */
+
 .answers-admin {
-	--answers-pro-cta: #92400e;
+	--answers-pro-accent: #b45309;      /* decorative amber */
+	--answers-pro-accent-text: #92400e; /* dark amber for white-on-accent CTAs */
 	--answers-pro-muted: #646970;
-	--answers-pro-radius: 10px;
-	--answers-pro-radius-sm: 8px;
+	--answers-pro-radius: 8px;
+	--answers-pro-radius-sm: 6px;
 	--answers-pro-gap: 20px;
 }
 
@@ -238,43 +211,43 @@
 	display: flex;
 	align-items: center;
 	gap: 14px;
-	margin: 0 0 var(--answers-pro-gap);
+	margin: 1em 0 var(--answers-pro-gap);
 	padding: 12px 16px;
-	border: 1px solid color-mix(in srgb, var(--answers-a-accent) 30%, #dcdcde);
-	border-inline-start: 4px solid var(--answers-a-accent);
+	border: 1px solid color-mix(in srgb, var(--answers-pro-accent) 30%, #dcdcde);
+	border-inline-start: 4px solid var(--answers-pro-accent);
 	border-radius: var(--answers-pro-radius);
-	background: color-mix(in srgb, var(--answers-a-accent) 7%, #fff);
+	background: color-mix(in srgb, var(--answers-pro-accent) 7%, #fff);
 }
 .answers-admin .answers-pro-banner__tag,
 .answers-admin .answers-pro-card__badge,
 .answers-admin .answers-pro-aside__eyebrow {
 	font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
 }
-.answers-admin .answers-pro-banner__tag { flex: 0 0 auto; padding: 2px 8px; border-radius: 999px; color: #fff; background: var(--answers-pro-cta); }
+.answers-admin .answers-pro-banner__tag { flex: 0 0 auto; padding: 2px 8px; border-radius: 999px; color: #fff; background: var(--answers-pro-accent-text); }
 .answers-admin .answers-pro-banner__text { flex: 1 1 auto; margin: 0; color: #1d2327; }
 .answers-admin .answers-pro-banner__sub { margin-inline-start: 4px; color: var(--answers-pro-muted); }
 .answers-admin .answers-pro-banner__price { margin-inline-start: 6px; color: var(--answers-pro-muted); font-weight: 600; white-space: nowrap; }
 .answers-admin .answers-pro-banner__dismiss { flex: 0 0 auto; font-size: 18px; line-height: 1; text-decoration: none; color: var(--answers-pro-muted); padding: 4px; border-radius: 4px; }
 .answers-admin .answers-pro-banner__dismiss:hover { color: #1d2327; background: rgba(0, 0, 0, .05); }
 
-/* Accent CTA buttons (override WP blue with the readable dark-amber accent) */
+/* Accent CTA buttons (override WP blue with the readable dark accent) */
 .answers-admin .answers-pro-banner__cta.button-primary,
 .answers-admin .answers-pro-aside__cta.button-primary {
-	background: var(--answers-pro-cta); border-color: color-mix(in srgb, var(--answers-pro-cta) 80%, #000); color: #fff; text-shadow: none; box-shadow: none;
+	background: var(--answers-pro-accent-text); border-color: color-mix(in srgb, var(--answers-pro-accent-text) 80%, #000); color: #fff; text-shadow: none; box-shadow: none;
 }
 .answers-admin .answers-pro-banner__cta.button-primary:hover,
-.answers-admin .answers-pro-aside__cta.button-primary:hover { background: color-mix(in srgb, var(--answers-pro-cta) 88%, #000); border-color: color-mix(in srgb, var(--answers-pro-cta) 70%, #000); }
+.answers-admin .answers-pro-aside__cta.button-primary:hover { background: color-mix(in srgb, var(--answers-pro-accent-text) 88%, #000); }
 
-/* Sidebar promo card — forced light surface so text stays readable in both schemes. */
+/* Sidebar promo card */
 .answers-admin .answers-pro-aside {
-	background: #fff; border: 1px solid var(--answers-a-card-border); border-top: 3px solid var(--answers-a-accent); border-radius: var(--answers-pro-radius); padding: 18px 20px; position: sticky; top: 40px;
+	background: #fff; border: 1px solid #dcdcde; border-top: 3px solid var(--answers-pro-accent); border-radius: var(--answers-pro-radius); padding: 18px 20px; position: sticky; top: 40px;
 }
-.answers-admin .answers-pro-aside__eyebrow { margin: 0 0 4px; color: var(--answers-pro-cta); }
-.answers-admin .answers-pro-aside__heading { margin: 0 0 12px; font-size: 16px; line-height: 1.3; color: #1d2327; }
+.answers-admin .answers-pro-aside__eyebrow { margin: 0 0 4px; color: var(--answers-pro-accent-text); }
+.answers-admin .answers-pro-aside__heading { margin: 0 0 12px; font-size: 16px; line-height: 1.3; }
 .answers-admin .answers-pro-aside__list { margin: 0 0 16px; padding: 0; list-style: none; }
 .answers-admin .answers-pro-aside__list li { display: flex; align-items: flex-start; gap: 8px; padding: 5px 0; color: #1d2327; font-size: 13px; }
 .answers-admin .answers-pro-aside__lock::before,
-.answers-admin .answers-pro-card__lock::before { content: "\f160"; font-family: dashicons; font-size: 15px; line-height: 1.2; color: var(--answers-a-accent); }
+.answers-admin .answers-pro-card__lock::before { content: "\f160"; font-family: dashicons; font-size: 15px; line-height: 1.2; color: var(--answers-pro-accent); }
 .answers-admin .answers-pro-aside__cta { width: 100%; text-align: center; }
 .answers-admin .answers-pro-aside__price { margin: 10px 0 0; font-size: 12px; color: var(--answers-pro-muted); text-align: center; }
 
@@ -282,10 +255,10 @@
 .answers-admin .answers-pro-cards { max-width: 60rem; margin: var(--answers-pro-gap) 0 0; }
 .answers-admin .answers-pro-cards__title { font-size: 15px; margin: 0 0 12px; }
 .answers-admin .answers-pro-cards__grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
-.answers-admin .answers-pro-card { position: relative; padding: 16px 16px 16px 18px; border: 1px solid var(--answers-a-card-border); border-radius: var(--answers-pro-radius-sm); background: color-mix(in srgb, var(--answers-a-accent) 3%, #fff); }
-.answers-admin .answers-pro-card__badge { position: absolute; top: 12px; inset-inline-end: 12px; padding: 1px 7px; border-radius: 999px; color: var(--answers-pro-cta); border: 1px solid color-mix(in srgb, var(--answers-a-accent) 40%, #fff); }
+.answers-admin .answers-pro-card { position: relative; padding: 16px; border: 1px solid #dcdcde; border-radius: var(--answers-pro-radius-sm); background: color-mix(in srgb, var(--answers-pro-accent) 3%, #fff); }
+.answers-admin .answers-pro-card__badge { position: absolute; top: 12px; inset-inline-end: 12px; padding: 1px 7px; border-radius: 999px; color: var(--answers-pro-accent-text); border: 1px solid color-mix(in srgb, var(--answers-pro-accent) 40%, #fff); }
 .answers-admin .answers-pro-card__lock { display: inline-block; margin-bottom: 6px; }
-.answers-admin .answers-pro-card__title { margin: 0 0 6px; font-size: 14px; line-height: 1.3; color: #1d2327; }
+.answers-admin .answers-pro-card__title { margin: 0 0 6px; font-size: 14px; line-height: 1.3; }
 .answers-admin .answers-pro-card__desc { margin: 0; font-size: 12.5px; line-height: 1.5; color: var(--answers-pro-muted); }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -1,10 +1,10 @@
-=== Plogins Answers - Product Q&A for WooCommerce ===
+=== Answers - Product Q&A for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, faq, product faq, accordion
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 0.1.3
+Stable tag: 1.0.5
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -99,7 +99,23 @@ stored entirely on your own site: per-product items in the `_answers_faqs` post
 meta and plugin settings in the `answers_settings` option (with a schema marker
 in `answers_db_version`). Nothing is sent off-site, and the plugin sends no email.
 
+== Translations ==
+
+Plogins Answers includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-answers`, so WordPress.org language packs can also override or extend these bundled translations.
+
 == Changelog ==
+
+= 1.0.4 =
+* Translations: completed Polish, German and Spanish for the PRO upgrade panel.
+
+= 1.0.3 =
+* Fixed low-contrast admin headings under an OS dark-mode preference.
+
+= 1.0.2 =
+* Added bundled Polish, German and Spanish translations for the plugin interface.
+
+= 1.0.1 =
+* First stable release.
 
 = 0.1.3 =
 * Renamed to Plogins Answers for WooCommerce for a more distinctive plugin name.

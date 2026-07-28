@@ -1,5 +1,5 @@
 /**
- * Answers — admin repeater (progressive, dependency-free).
+ * Answers, admin repeater (progressive, dependency-free).
  *
  * "Add question" clones a hidden <template> row, re-indexes the field names so
  * each row posts as its own array entry, and enables the cloned inputs
