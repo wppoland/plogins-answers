@@ -30,12 +30,12 @@ return [
             'pl' => ['title' => 'Głosowanie „czy pomocne”', 'desc' => 'Klienci oceniają odpowiedzi bez komentarzy; liczniki zapisane per produkt.'],
         ],
         [
-            'en' => ['title' => 'FAQ categories', 'desc' => 'Group questions into categories on the product page (FaqCategories, shipped).'],
-            'pl' => ['title' => 'Kategorie FAQ', 'desc' => 'Grupuj pytania w kategorie na karcie produktu (FaqCategories, wdrożone).'],
+            'en' => ['title' => 'FAQ categories', 'desc' => 'Group questions into categories on the product page (shipped).'],
+            'pl' => ['title' => 'Kategorie FAQ', 'desc' => 'Grupuj pytania w kategorie na karcie produktu (wdrożone).'],
         ],
         [
-            'en' => ['title' => 'AI FAQ drafting', 'desc' => 'Generate draft questions and answers from product context in wp-admin (FaqAiDraft, shipped).'],
-            'pl' => ['title' => 'Szkicowanie AI FAQ', 'desc' => 'Generuj szkice pytań i odpowiedzi z kontekstu produktu w panelu (FaqAiDraft, wdrożone).'],
+            'en' => ['title' => 'AI FAQ drafting', 'desc' => 'Generate draft questions and answers from product context in wp-admin (shipped).'],
+            'pl' => ['title' => 'Szkicowanie AI FAQ', 'desc' => 'Generuj szkice pytań i odpowiedzi z kontekstu produktu w panelu (wdrożone).'],
         ],
         [
             'en' => ['title' => 'FAQ analytics', 'desc' => 'Report on popular questions and no-result search terms.'],
