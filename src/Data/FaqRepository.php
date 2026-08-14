@@ -20,11 +20,15 @@ final class FaqRepository
     /** Post meta key holding the per-product FAQ repeater (array of pairs). */
     public const META_PRODUCT_FAQS = '_answers_faqs';
 
-    /** Hard cap on rendered items to keep output sane. */
-    private const MAX_ITEMS = 50;
-
     /**
-     * Get the ordered, de-duplicated FAQ items for a product.
+     * Get the ordered FAQ items for a product.
+     *
+     * Every saved row is returned, in the order the merchant listed it. This
+     * used to skip any question that repeated an earlier one (case-insensitive)
+     * and to stop after the fiftieth item: the FAQs tab kept showing all the
+     * rows, the merchant saw them saved, and the shopper got a shorter
+     * accordion with no hint that anything was missing. Size and repeats belong
+     * to whoever writes the list, not to the reader.
      *
      * @return list<FaqItem>
      */
@@ -35,7 +39,6 @@ final class FaqRepository
         }
 
         $items = [];
-        $seen  = [];
 
         foreach ($this->rawProductItems($productId) as $pair) {
             $question = trim($pair['question']);
@@ -45,19 +48,10 @@ final class FaqRepository
                 continue;
             }
 
-            $key = strtolower($question);
-
-            if (isset($seen[$key])) {
-                continue;
-            }
-
-            $seen[$key] = true;
-            $category   = isset($pair['category']) ? sanitize_key((string) $pair['category']) : '';
-            $items[]    = new FaqItem($question, $answer, md5($key), $category);
-
-            if (count($items) >= self::MAX_ITEMS) {
-                break;
-            }
+            $category = isset($pair['category']) ? sanitize_key((string) $pair['category']) : '';
+            // Key stays derived from the lowercased question so Answers Pro
+            // votes survive edits and repeated questions share one tally.
+            $items[]  = new FaqItem($question, $answer, md5(strtolower($question)), $category);
         }
 
         return $items;
