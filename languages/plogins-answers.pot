@@ -1,48 +1,46 @@
-# Copyright (C) 2026 WPPoland
+# Copyright (C) 2026 WPPoland.com
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Answers - Product FAQs for WooCommerce 0.1.0\n"
+"Project-Id-Version: Answers - Product Q&A for WooCommerce 1.0.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/answers\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-16T20:23:47+00:00\n"
+"POT-Creation-Date: 2026-08-14T13:47:02+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: plogins-answers\n"
 
 #. Plugin Name of the plugin
-#: answers.php
-msgid "Answers - Product FAQs for WooCommerce"
+#: plogins-answers.php
+msgid "Answers - Product Q&A for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: answers.php
-msgid "https://plogins.com/answers/"
+#: plogins-answers.php
+msgid "https://plogins.com/plogins-answers/"
 msgstr ""
 
 #. Description of the plugin
-#: answers.php
-msgid ""
-"Add per-product FAQs as an accessible accordion to reduce pre-sale questions."
+#: plogins-answers.php
+msgid "Add per-product FAQs as an accessible accordion to reduce pre-sale questions."
 msgstr ""
 
 #. Author of the plugin
-#: answers.php
-msgid "WPPoland"
+#: plogins-answers.php
+msgid "WPPoland.com"
 msgstr ""
 
 #. Author URI of the plugin
-#: answers.php
-msgid "https://plogins.com/"
+#: plogins-answers.php
+msgid "https://wppoland.com"
 msgstr ""
 
-#: answers.php:47
-msgid ""
-"Answers - Product FAQs for WooCommerce requires WooCommerce to be active."
+#: plogins-answers.php:48
+msgid "Answers - Product FAQs for WooCommerce requires WooCommerce to be active."
 msgstr ""
 
 #: src/Admin/FaqRepeater.php:47
@@ -50,106 +48,38 @@ msgid "Add question"
 msgstr ""
 
 #: src/Admin/FaqRepeater.php:51
-msgid ""
-"Drag is not required, questions render in the order listed. Leave a row "
-"blank to remove it on save. Answers accept basic HTML (links, lists, bold)."
+msgid "Drag is not required, questions render in the order listed. Leave a row blank to remove it on save. Answers accept basic HTML (links, lists, bold)."
 msgstr ""
 
-#: src/Admin/FaqRepeater.php:70
+#: src/Admin/FaqRepeater.php:72
 msgid "Question"
 msgstr ""
 
-#: src/Admin/FaqRepeater.php:76
+#: src/Admin/FaqRepeater.php:78
 msgid "e.g. What is your return policy?"
 msgstr ""
 
-#: src/Admin/FaqRepeater.php:83
+#: src/Admin/FaqRepeater.php:85
 msgid "Answer"
 msgstr ""
 
-#: src/Admin/FaqRepeater.php:88
+#: src/Admin/FaqRepeater.php:90
 msgid "Write a clear, concise answer. Basic HTML is allowed."
 msgstr ""
 
-#: src/Admin/FaqRepeater.php:93
+#: src/Admin/FaqRepeater.php:106
 msgid "Remove this question"
 msgstr ""
 
-#: src/Admin/ProductFaqTab.php:45 src/Admin/Settings.php:83
-#: src/Admin/Settings.php:135 src/Service/FaqRenderer.php:193
+#: src/Admin/ProductFaqTab.php:45
+#: src/Admin/Settings.php:91
+#: src/Admin/Settings.php:145
+#: src/Service/FaqRenderer.php:209
 msgid "FAQs"
 msgstr ""
 
 #: src/Admin/ProductFaqTab.php:65
-msgid ""
-"Add questions buyers ask before purchase. They render as an accessible "
-"accordion on the product page."
-msgstr ""
-
-#: src/Admin/Settings.php:49
-msgid "Answers: Product FAQs"
-msgstr ""
-
-#: src/Admin/Settings.php:50
-msgid "Answers"
-msgstr ""
-
-#: src/Admin/Settings.php:91
-msgid "Answer buyer questions, right on the product page"
-msgstr ""
-
-#: src/Admin/Settings.php:93
-msgid ""
-"Add FAQs to a product in its \"FAQs\" data tab. They render as an "
-"accessible, keyboard-friendly accordion in a \"FAQs\" tab on the product "
-"page."
-msgstr ""
-
-#: src/Admin/Settings.php:102
-msgid "Display"
-msgstr ""
-
-#: src/Admin/Settings.php:104
-msgid ""
-"Control whether the FAQ tab appears on product pages and what it is called. "
-"With FAQs enabled, any product that has FAQ items gets the tab "
-"automatically, no per-product setup beyond authoring the questions."
-msgstr ""
-
-#: src/Admin/Settings.php:109
-msgid "Enable FAQs"
-msgstr ""
-
-#: src/Admin/Settings.php:119
-msgid "Show product FAQs on the storefront."
-msgstr ""
-
-#: src/Admin/Settings.php:121
-msgid "When off, no FAQs render and the FAQ stylesheet is not loaded."
-msgstr ""
-
-#: src/Admin/Settings.php:126
-msgid "Tab title"
-msgstr ""
-
-#. translators: %s: the tab label currently in effect, e.g. "FAQs".
-#: src/Admin/Settings.php:141
-#, php-format
-msgid ""
-"Sets the tab label shoppers see next to \"Description\" and \"Reviews\". "
-"Leave blank to use \"FAQs\". Currently showing: %s"
-msgstr ""
-
-#: src/Admin/Settings.php:152
-msgid "Preview, how the product-page tabs read:"
-msgstr ""
-
-#: src/Admin/Settings.php:154
-msgid "Description"
-msgstr ""
-
-#: src/Admin/Settings.php:156
-msgid "Reviews"
+msgid "Add questions buyers ask before purchase. They render as an accessible accordion on the product page."
 msgstr ""
 
 #: src/Admin/ProUpsell.php:78
@@ -210,4 +140,62 @@ msgstr ""
 #: src/Admin/ProUpsell.php:214
 #, php-format
 msgid "What %s adds"
+msgstr ""
+
+#: src/Admin/Settings.php:57
+msgid "Answers: Product FAQs"
+msgstr ""
+
+#: src/Admin/Settings.php:58
+msgid "Answers"
+msgstr ""
+
+#: src/Admin/Settings.php:101
+msgid "Answer buyer questions, right on the product page"
+msgstr ""
+
+#: src/Admin/Settings.php:103
+msgid "Add FAQs to a product in its \"FAQs\" data tab. They render as an accessible, keyboard-friendly accordion in a \"FAQs\" tab on the product page."
+msgstr ""
+
+#: src/Admin/Settings.php:112
+msgid "Display"
+msgstr ""
+
+#: src/Admin/Settings.php:114
+msgid "Control whether the FAQ tab appears on product pages and what it is called. With FAQs enabled, any product that has FAQ items gets the tab automatically, no per-product setup beyond authoring the questions."
+msgstr ""
+
+#: src/Admin/Settings.php:119
+msgid "Enable FAQs"
+msgstr ""
+
+#: src/Admin/Settings.php:129
+msgid "Show product FAQs on the storefront."
+msgstr ""
+
+#: src/Admin/Settings.php:131
+msgid "When off, no FAQs render and the FAQ stylesheet is not loaded."
+msgstr ""
+
+#: src/Admin/Settings.php:136
+msgid "Tab title"
+msgstr ""
+
+#. translators: %s: the tab label currently in effect, e.g. "FAQs".
+#: src/Admin/Settings.php:151
+#, php-format
+msgid "Sets the tab label shoppers see next to \"Description\" and \"Reviews\". Leave blank to use \"FAQs\". Currently showing: %s"
+msgstr ""
+
+#: src/Admin/Settings.php:162
+msgid "Preview, how the product-page tabs read:"
+msgstr ""
+
+#: src/Admin/Settings.php:164
+msgid "Description"
+msgstr ""
+
+#: src/Admin/Settings.php:166
+msgid "Reviews"
 msgstr ""
