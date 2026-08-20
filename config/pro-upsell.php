@@ -37,9 +37,5 @@ return [
             'en' => ['title' => 'AI FAQ drafting', 'desc' => 'Generate draft questions and answers from product context in wp-admin (shipped).'],
             'pl' => ['title' => 'Szkicowanie AI FAQ', 'desc' => 'Generuj szkice pytań i odpowiedzi z kontekstu produktu w panelu (wdrożone).'],
         ],
-        [
-            'en' => ['title' => 'FAQ analytics', 'desc' => 'Report on popular questions and no-result search terms.'],
-            'pl' => ['title' => 'Analityka FAQ', 'desc' => 'Raporty o popularnych pytaniach i frazach bez wyników.'],
-        ],
     ],
 ];
