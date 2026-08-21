@@ -28,14 +28,14 @@ close with a height transition that is switched off under `prefers-reduced-motio
 the answer text stays reachable when JavaScript is off, and the styling follows the
 visitor's light or dark colour scheme.
 
-Source code and bug reports live on GitHub: https://github.com/wppoland/plogins-answers
+Source code and bug reports live on GitHub: [github.com/wppoland/plogins-answers](https://github.com/wppoland/plogins-answers)
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-answers/docs/
-* **Plugin page** - https://plogins.com/plogins-answers/
-* **Source code** - https://github.com/wppoland/plogins-answers
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-answers/issues
+* **Documentation**: [plogins.com/plogins-answers/docs/](https://plogins.com/plogins-answers/docs/)
+* **Plugin page**: [plogins.com/plogins-answers/](https://plogins.com/plogins-answers/)
+* **Source code**: [github.com/wppoland/plogins-answers](https://github.com/wppoland/plogins-answers)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-answers/issues](https://github.com/wppoland/plogins-answers/issues)
 
 
 = Features =
