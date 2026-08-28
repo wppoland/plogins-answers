@@ -15,7 +15,6 @@ return [
     'sellable'   => true,
     'price_from' => 29,
     'currency'   => 'EUR',
-    'price_pln'  => 129,
     'lead'       => [
         'en' => 'FAQ search, helpful voting, categories and AI FAQ drafting are available in the 0.4.0 release.',
         'pl' => 'Wyszukiwarka FAQ, głosowanie, kategorie i szkicowanie AI są dostępne w wydaniu 0.4.0.',
