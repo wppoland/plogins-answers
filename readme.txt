@@ -25,8 +25,9 @@ The front-end FAQs are an **accessible accordion**. Each question is a real
 `<button>` with `aria-expanded` controlling an `aria`-labelled region, so it works
 with the keyboard and is announced correctly by screen readers. Panels open and
 close with a height transition that is switched off under `prefers-reduced-motion`,
-the answer text stays reachable when JavaScript is off, and the styling follows the
-visitor's light or dark colour scheme.
+and the styling follows the visitor's light or dark colour scheme. The enhancement
+script is required to open a panel; the answer text is present in the page source
+but not reachable to a visitor with JavaScript disabled.
 
 Source code and bug reports live on GitHub: [github.com/wppoland/plogins-answers](https://github.com/wppoland/plogins-answers)
 
