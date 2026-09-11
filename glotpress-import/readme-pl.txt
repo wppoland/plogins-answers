@@ -42,10 +42,10 @@ Kod źródłowy i zgłoszenia błędów znajdziesz na GitHubie: https://github.c
 
 == Installation ==
 
-1. Wgraj wtyczkę do `/wp-content/plugins/answers` lub zainstaluj przez Wtyczki → Dodaj nową.
+1. Wgraj wtyczkę do `/wp-content/plugins/answers` lub zainstaluj przez Wtyczki > Dodaj nową.
 2. Włącz ją. WooCommerce musi być aktywne.
 3. Edytuj produkt i otwórz zakładkę <strong>FAQs</strong>, aby dodać pytania.
-4. Jeśli chcesz, zmień nazwę zakładki FAQ w <strong>WooCommerce → Answers</strong>.
+4. Jeśli chcesz, zmień nazwę zakładki FAQ w <strong>WooCommerce > Answers</strong>.
 
 == Frequently Asked Questions ==
 
