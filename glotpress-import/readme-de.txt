@@ -42,10 +42,10 @@ Quellcode und Fehlerberichte findest du auf GitHub: https://github.com/wppoland/
 
 == Installation ==
 
-1. Lade das Plugin nach `/wp-content/plugins/answers` hoch oder installiere es über Plugins → Installieren.
+1. Lade das Plugin nach `/wp-content/plugins/answers` hoch oder installiere es über Plugins > Installieren.
 2. Aktiviere es. WooCommerce muss aktiv sein.
 3. Bearbeite ein Produkt und öffne den Tab <strong>FAQs</strong>, um Fragen hinzuzufügen.
-4. Benenne den FAQ-Tab unter <strong>WooCommerce → Answers</strong> um, wenn du möchtest.
+4. Benenne den FAQ-Tab unter <strong>WooCommerce > Answers</strong> um, wenn du möchtest.
 
 == Frequently Asked Questions ==
 

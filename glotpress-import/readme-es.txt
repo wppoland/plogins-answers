@@ -42,10 +42,10 @@ El código fuente y los informes de errores están en GitHub: https://github.com
 
 == Installation ==
 
-1. Sube el plugin a `/wp-content/plugins/answers` o instálalo desde Plugins → Añadir nuevo.
+1. Sube el plugin a `/wp-content/plugins/answers` o instálalo desde Plugins > Añadir nuevo.
 2. Actívalo. WooCommerce debe estar activo.
 3. Edita un producto y abre la pestaña <strong>FAQs</strong> para añadir preguntas.
-4. Cambia el nombre de la pestaña de preguntas frecuentes en <strong>WooCommerce → Answers</strong> si quieres.
+4. Cambia el nombre de la pestaña de preguntas frecuentes en <strong>WooCommerce > Answers</strong> si quieres.
 
 == Frequently Asked Questions ==
 

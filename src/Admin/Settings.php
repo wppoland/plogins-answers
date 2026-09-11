@@ -9,7 +9,7 @@ use Answers\Contract\HasHooks;
 defined('ABSPATH') || exit;
 
 /**
- * Settings screen registered as a WooCommerce submenu ("WooCommerce → Answers").
+ * Settings screen registered as a WooCommerce submenu ("WooCommerce > Answers").
  *
  * Stores settings in the `answers_settings` option (array): whether FAQs are
  * shown on the storefront and the label of the FAQ tab. All output is escaped;
