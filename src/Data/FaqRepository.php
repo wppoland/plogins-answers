@@ -49,7 +49,7 @@ final class FaqRepository
             }
 
             $category = isset($pair['category']) ? sanitize_key((string) $pair['category']) : '';
-            // Key stays derived from the lowercased question so Answers Pro
+            // Key stays derived from the lowercased question so Respondo Pro
             // votes survive edits and repeated questions share one tally.
             $items[]  = new FaqItem($question, $answer, md5(strtolower($question)), $category);
         }

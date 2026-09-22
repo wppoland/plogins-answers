@@ -1,10 +1,10 @@
-=== Plogins Answers - Product Q&A for WooCommerce ===
+=== Respondo - Product Q&A for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, faq, product faq, accordion
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.13
+Stable tag: 1.1.0
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ Add per-product FAQs as an accessible accordion to reduce pre-sale questions.
 
 == Description ==
 
-Answers adds a frequently-asked-questions section to your WooCommerce products,
+Respondo adds a frequently-asked-questions section to your WooCommerce products,
 so shoppers can read the common pre-sale questions on the product page instead of
 emailing to ask.
 
@@ -52,10 +52,10 @@ Source code and bug reports live on GitHub: [github.com/wppoland/plogins-answers
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/answers`, or install via Plugins > Add New.
+1. Upload the plugin to `/wp-content/plugins/respondo`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
 3. Edit a product and open the **FAQs** tab to add questions.
-4. Rename the FAQ tab under **WooCommerce > Answers** if you like.
+4. Rename the FAQ tab under **WooCommerce > Respondo** if you like.
 
 == Frequently Asked Questions ==
 
@@ -89,11 +89,11 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 1. The FAQ accordion on a product page.
 2. The per-product FAQs tab in the product data panel.
-3. The Answers settings screen under WooCommerce.
+3. The Respondo settings screen under WooCommerce.
 
 == External Services ==
 
-Answers does not connect to any external service. It makes no outbound HTTP
+Respondo does not connect to any external service. It makes no outbound HTTP
 requests, and loads no third-party scripts, fonts, or stylesheets; its CSS and
 JavaScript are served from the plugin folder only. The FAQ content you write is
 stored entirely on your own site: per-product items in the `_answers_faqs` post
@@ -102,9 +102,12 @@ in `answers_db_version`). Nothing is sent off-site, and the plugin sends no emai
 
 == Translations ==
 
-Plogins Answers is fully translatable and ships the `plogins-answers.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
+Respondo is fully translatable and ships the `respondo.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.0 =
+* Renamed to Respondo. The WordPress.org review team asks a plugin name to lead with a distinctive, coined identifier rather than a generic descriptive word. Respondo is Esperanto for an answer. The text domain follows the name; the stored FAQs, the settings and every hook are unchanged.
 
 = 1.0.13 =
 * Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
