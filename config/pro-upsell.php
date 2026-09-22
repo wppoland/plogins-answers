@@ -10,7 +10,7 @@
 defined('ABSPATH') || exit;
 
 return [
-    'name'       => 'Answers Pro',
+    'name'       => 'Respondo Pro',
     'url'        => 'https://plogins.com/plogins-answers-pro/pricing/',
     'sellable'   => true,
     'price_from' => 29,

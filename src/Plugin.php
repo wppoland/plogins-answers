@@ -53,7 +53,7 @@ final class Plugin
         /**
          * Fires after the plugin has fully booted and all services are registered.
          *
-         * Add-ons (e.g. Answers Pro) listen on this action to extend the shared
+         * Add-ons (e.g. Respondo Pro) listen on this action to extend the shared
          * DI container and register their own hooks.
          *
          * @param Plugin $plugin The booted plugin instance.

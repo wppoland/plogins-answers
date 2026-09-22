@@ -1,6 +1,6 @@
 <?php
 /**
- * Uninstall cleanup for Answers.
+ * Uninstall cleanup for Respondo.
  *
  * Runs when the plugin is deleted from wp-admin. Removes the plugin's options.
  * Per-product FAQ meta (_answers_faqs) is intentionally left in place: it is
