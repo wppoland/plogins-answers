@@ -19,12 +19,12 @@ msgstr ""
 #. Plugin Name of the plugin
 #: respondo.php
 msgid "Plogins Answers - Product Q&A for WooCommerce"
-msgstr ""
+msgstr "Plogins Answers - Pytania i odpowiedzi o produkcie dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: respondo.php
 msgid "https://plogins.com/respondo/"
-msgstr ""
+msgstr "https://plogins.com/respondo/"
 
 #. Description of the plugin
 #: respondo.php
@@ -37,12 +37,12 @@ msgstr ""
 #. Author of the plugin
 #: respondo.php
 msgid "WPPoland.com"
-msgstr ""
+msgstr "WPPoland.com"
 
 #. Author URI of the plugin
 #: respondo.php
 msgid "https://wppoland.com"
-msgstr ""
+msgstr "https://wppoland.com"
 
 #: respondo.php:48
 msgid ""
