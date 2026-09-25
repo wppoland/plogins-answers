@@ -113,7 +113,7 @@ final class FaqRepeater
     /**
      * Sanitise a submitted repeater payload into clean question/answer pairs.
      * Questions are plain text; answers are filtered with wp_kses_post. Rows
-     * missing either field are dropped.
+     * missing either field are dropped. Expects already unslashed input.
      *
      * @param mixed $raw
      * @return list<array{question: string, answer: string, category?: string}>
@@ -131,8 +131,8 @@ final class FaqRepeater
                 continue;
             }
 
-            $question = isset($row['question']) ? sanitize_text_field((string) wp_unslash($row['question'])) : '';
-            $answer   = isset($row['answer']) ? wp_kses_post((string) wp_unslash($row['answer'])) : '';
+            $question = isset($row['question']) ? sanitize_text_field((string) $row['question']) : '';
+            $answer   = isset($row['answer']) ? wp_kses_post((string) $row['answer']) : '';
 
             $question = trim($question);
             $answer   = trim($answer);
