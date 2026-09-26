@@ -1,10 +1,10 @@
-=== Answers - Product Q&A for WooCommerce ===
+=== Respondo - Product Q&A for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, faq, product faq, accordion
 Requires at least: 6.5
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.5
+Stable tag: 1.1.2
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ Add per-product FAQs as an accessible accordion to reduce pre-sale questions.
 
 == Description ==
 
-Answers adds a frequently-asked-questions section to your WooCommerce products,
+Respondo adds a frequently-asked-questions section to your WooCommerce products,
 so shoppers can read the common pre-sale questions on the product page instead of
 emailing to ask.
 
@@ -25,17 +25,18 @@ The front-end FAQs are an **accessible accordion**. Each question is a real
 `<button>` with `aria-expanded` controlling an `aria`-labelled region, so it works
 with the keyboard and is announced correctly by screen readers. Panels open and
 close with a height transition that is switched off under `prefers-reduced-motion`,
-the answer text stays reachable when JavaScript is off, and the styling follows the
-visitor's light or dark colour scheme.
+and the styling follows the visitor's light or dark colour scheme. The enhancement
+script is required to open a panel; the answer text is present in the page source
+but not reachable to a visitor with JavaScript disabled.
 
-Source code and bug reports live on GitHub: https://github.com/wppoland/plogins-answers
+Source code and bug reports live on GitHub: [github.com/wppoland/plogins-answers](https://github.com/wppoland/plogins-answers)
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-answers/docs/
-* **Plugin page** - https://plogins.com/plogins-answers/
-* **Source code** - https://github.com/wppoland/plogins-answers
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-answers/issues
+* **Documentation**: [plogins.com/plogins-answers/docs/](https://plogins.com/plogins-answers/docs/)
+* **Plugin page**: [plogins.com/plogins-answers/](https://plogins.com/plogins-answers/)
+* **Source code**: [github.com/wppoland/plogins-answers](https://github.com/wppoland/plogins-answers)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-answers/issues](https://github.com/wppoland/plogins-answers/issues)
 
 
 = Features =
@@ -51,10 +52,10 @@ Source code and bug reports live on GitHub: https://github.com/wppoland/plogins-
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/answers`, or install via Plugins → Add New.
+1. Upload the plugin to `/wp-content/plugins/respondo`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
 3. Edit a product and open the **FAQs** tab to add questions.
-4. Rename the FAQ tab under **WooCommerce → Answers** if you like.
+4. Rename the FAQ tab under **WooCommerce > Respondo** if you like.
 
 == Frequently Asked Questions ==
 
@@ -88,11 +89,11 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 1. The FAQ accordion on a product page.
 2. The per-product FAQs tab in the product data panel.
-3. The Answers settings screen under WooCommerce.
+3. The Respondo settings screen under WooCommerce.
 
 == External Services ==
 
-Answers does not connect to any external service. It makes no outbound HTTP
+Respondo does not connect to any external service. It makes no outbound HTTP
 requests, and loads no third-party scripts, fonts, or stylesheets; its CSS and
 JavaScript are served from the plugin folder only. The FAQ content you write is
 stored entirely on your own site: per-product items in the `_answers_faqs` post
@@ -101,9 +102,40 @@ in `answers_db_version`). Nothing is sent off-site, and the plugin sends no emai
 
 == Translations ==
 
-Plogins Answers includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-answers`, so WordPress.org language packs can also override or extend these bundled translations.
+Respondo is fully translatable and ships the `respondo.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.2 =
+* Product FAQ items are sanitised as they are read from the product form, before they are validated and saved.
+
+= 1.1.1 =
+* The sidebar upgrade promo now follows the same dismissal as the banner. Dismissing the banner used to leave a full-height advert on the settings screen for good, which is not what the WordPress.org guideline on upgrade prompts means by used with moderation.
+
+= 1.1.0 =
+* Renamed to Respondo. The WordPress.org review team asks a plugin name to lead with a distinctive, coined identifier rather than a generic descriptive word. Respondo is Esperanto for an answer. The text domain follows the name; the stored FAQs, the settings and every hook are unchanged.
+
+= 1.0.13 =
+* Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
+* Fixed: arrow glyphs in the admin menu paths, and in the strings handed to translators. An arrow inside a translatable string makes the glyph every translator's problem and changes the layout in any locale that drops it.
+
+= 1.0.12 =
+* Fixed: deleting the plugin left the per-user "dismiss" flag from the PRO notice in the database. Uninstall now removes it for every user, not just the one who dismissed it.
+
+= 1.0.11 =
+* The translation template was regenerated. It still named an older version of the plugin and pointed at source lines that had since moved, which is what translation tools read to show a string in context.
+
+= 1.0.10 =
+* Renamed to Plogins Answers - Product Q&A for WooCommerce so the name leads with the brand rather than a generic word, which is what the WordPress.org plugin review team asks for. The plugin slug is unchanged.
+
+= 1.0.9 =
+* Tested against WordPress 7.1. Verified by activating this build on a clean 7.1 install with WooCommerce 11.1, not by editing the header.
+
+= 1.0.8 =
+* Fixed the PRO promo on the settings screen quoting a price in PLN. PRO is priced and charged in EUR, so an admin on a Polish site was shown a zloty amount and then billed in euro, and the zloty figure was a fixed conversion that drifted from the real charge as the rate moved. The promo now shows the euro price that is actually taken.
+
+= 1.0.6 =
+* Every question saved in the FAQs tab now shows on the product page: repeated questions are no longer hidden from shoppers, and lists longer than 50 questions are no longer cut short.
 
 = 1.0.4 =
 * Translations: completed Polish, German and Spanish for the PRO upgrade panel.
