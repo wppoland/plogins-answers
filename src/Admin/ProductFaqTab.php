@@ -42,7 +42,7 @@ final class ProductFaqTab implements HasHooks
     public function addTab(array $tabs): array
     {
         $tabs['answers_faqs'] = [
-            'label'    => __('FAQs', 'plogins-answers'),
+            'label'    => __('FAQs', 'respondo'),
             'target'   => 'answers_faqs_data',
             'class'    => ['hide_if_external'],
             'priority' => 65,
@@ -62,7 +62,7 @@ final class ProductFaqTab implements HasHooks
             <?php wp_nonce_field(self::NONCE_ACTION, self::NONCE_FIELD); ?>
             <div class="options_group">
                 <p class="answers-product-panel__intro">
-                    <?php esc_html_e('Add questions buyers ask before purchase. They render as an accessible accordion on the product page.', 'plogins-answers'); ?>
+                    <?php esc_html_e('Add questions buyers ask before purchase. They render as an accessible accordion on the product page.', 'respondo'); ?>
                 </p>
                 <?php FaqRepeater::render($items, 'answers_faqs'); ?>
             </div>
@@ -72,10 +72,10 @@ final class ProductFaqTab implements HasHooks
 
     public function save(\WC_Product $product): void
     {
-        // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce is verified on the next line before any input is read.
-        $nonce = isset($_POST[self::NONCE_FIELD]) ? sanitize_text_field(wp_unslash($_POST[self::NONCE_FIELD])) : '';
-
-        if ($nonce === '' || ! wp_verify_nonce($nonce, self::NONCE_ACTION)) {
+        if (
+            ! isset($_POST[self::NONCE_FIELD])
+            || ! wp_verify_nonce(sanitize_text_field(wp_unslash($_POST[self::NONCE_FIELD])), self::NONCE_ACTION)
+        ) {
             return;
         }
 
@@ -83,9 +83,9 @@ final class ProductFaqTab implements HasHooks
             return;
         }
 
-        // wp_unslash + per-field sanitisation happens inside FaqRepeater::sanitize.
-        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
-        $raw   = isset($_POST['answers_faqs']) && is_array($_POST['answers_faqs']) ? $_POST['answers_faqs'] : [];
+        // Sanitised on read; answers may hold HTML, so wp_kses_post (which keeps
+        // newlines). FaqRepeater::sanitize then narrows each field and drops empty rows.
+        $raw   = isset($_POST['answers_faqs']) && is_array($_POST['answers_faqs']) ? map_deep(wp_unslash($_POST['answers_faqs']), 'wp_kses_post') : [];
         $items = FaqRepeater::sanitize($raw);
 
         if ($items === []) {
