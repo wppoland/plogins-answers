@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Answers - Product FAQs for WooCommerce 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/answers\n"
-"POT-Creation-Date: 2026-09-26T04:48:57+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/respondo\n"
+"POT-Creation-Date: 2026-10-05T11:15:18+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
@@ -23,7 +23,7 @@ msgstr "Respondo - Produkt-FAQs für WooCommerce"
 #. Plugin URI of the plugin
 #: respondo.php
 msgid "https://plogins.com/plogins-answers/"
-msgstr ""
+msgstr "https://plogins.com/plogins-answers/"
 
 #. Description of the plugin
 #: respondo.php
@@ -36,16 +36,16 @@ msgstr ""
 #. Author of the plugin
 #: respondo.php
 msgid "WPPoland.com"
-msgstr ""
+msgstr "WPPoland.com"
 
 #. Author URI of the plugin
 #: respondo.php
 msgid "https://wppoland.com"
-msgstr ""
+msgstr "https://wppoland.com"
 
 #: respondo.php:48
 msgid "Respondo requires WooCommerce to be installed and activated."
-msgstr ""
+msgstr "Respondo erfordert, dass WooCommerce installiert und aktiviert ist."
 
 #: src/Admin/FaqRepeater.php:47
 msgid "Add question"
@@ -53,8 +53,8 @@ msgstr "Frage hinzufügen"
 
 #: src/Admin/FaqRepeater.php:51
 msgid ""
-"Drag is not required, questions render in the order listed. Leave a row "
-"blank to remove it on save. Answers accept basic HTML (links, lists, bold)."
+"Drag is not required, questions render in the order listed. Leave a row blank"
+" to remove it on save. Answers accept basic HTML (links, lists, bold)."
 msgstr ""
 "Ziehen ist nicht erforderlich, die Fragen werden in der angegebenen "
 "Reihenfolge angezeigt. Lass eine Zeile leer, um sie beim Speichern zu "
@@ -95,10 +95,6 @@ msgstr ""
 "Produktseite als barrierefreies Akkordeon angezeigt."
 
 #: src/Admin/ProUpsell.php:85
-msgid "Wkrótce"
-msgstr "Demnächst"
-
-#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Demnächst"
 
@@ -111,10 +107,6 @@ msgstr "ab %1$s%2$d/Jahr"
 #: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Auf PRO upgraden"
-
-#: src/Admin/ProUpsell.php:101
-msgid "Powiadom mnie"
-msgstr "Benachrichtige mich"
 
 #: src/Admin/ProUpsell.php:101
 msgid "Get notified"
@@ -154,7 +146,7 @@ msgstr "Respondo: Produkt-FAQs"
 
 #: src/Admin/Settings.php:58
 msgid "Respondo"
-msgstr ""
+msgstr "Respondo"
 
 #: src/Admin/Settings.php:101
 msgid "Answer buyer questions, right on the product page"
@@ -162,9 +154,8 @@ msgstr "Beantworte Käuferfragen direkt auf der Produktseite"
 
 #: src/Admin/Settings.php:103
 msgid ""
-"Add FAQs to a product in its \"FAQs\" data tab. They render as an "
-"accessible, keyboard-friendly accordion in a \"FAQs\" tab on the product "
-"page."
+"Add FAQs to a product in its \"FAQs\" data tab. They render as an accessible,"
+" keyboard-friendly accordion in a \"FAQs\" tab on the product page."
 msgstr ""
 "Füge einem Produkt im Daten-Tab „FAQs“ Fragen und Antworten hinzu. Sie "
 "erscheinen auf der Produktseite als barrierefreies, tastaturfreundliches "
@@ -177,8 +168,8 @@ msgstr "Anzeige"
 #: src/Admin/Settings.php:114
 msgid ""
 "Control whether the FAQ tab appears on product pages and what it is called. "
-"With FAQs enabled, any product that has FAQ items gets the tab "
-"automatically, no per-product setup beyond authoring the questions."
+"With FAQs enabled, any product that has FAQ items gets the tab automatically,"
+" no per-product setup beyond authoring the questions."
 msgstr ""
 "Steuere, ob der FAQ-Tab auf Produktseiten erscheint und wie er heißt. Wenn "
 "FAQs aktiviert sind, erhält jedes Produkt mit FAQ-Einträgen den Tab "
@@ -225,6 +216,12 @@ msgstr "Beschreibung"
 #: src/Admin/Settings.php:166
 msgid "Reviews"
 msgstr "Rezensionen"
+
+#~ msgid "Wkrótce"
+#~ msgstr "Demnächst"
+
+#~ msgid "Powiadom mnie"
+#~ msgstr "Benachrichtige mich"
 
 #~ msgid "Answers"
 #~ msgstr "Antworten"
