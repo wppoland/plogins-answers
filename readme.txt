@@ -50,6 +50,31 @@ Source code and bug reports live on GitHub: [github.com/wppoland/plogins-answers
 * Translation ready (POT included), and removes its options on uninstall.
 * Declares HPOS and cart/checkout blocks compatibility.
 
+== Respondo Pro ==
+
+Respondo Pro is a separate paid plugin that extends Respondo.
+
+Included in Respondo:
+
+* Per-product FAQs
+* Accessible accordion
+* Editable tab label
+* Safe answers
+* Lightweight loading
+
+Respondo Pro adds:
+
+* FAQ search
+* Helpful voting
+* FAQ categories
+* AI FAQ drafting
+
+The free edition is not a trial and its features stay available without a time limit.
+
+* **Respondo Pro** - [plogins.com/plogins-answers-pro/](https://plogins.com/plogins-answers-pro/)
+* **Compare editions and pricing** - [plogins.com/plogins-answers-pro/pricing/](https://plogins.com/plogins-answers-pro/pricing/)
+* **PRO documentation** - [plogins.com/plogins-answers-pro/docs/](https://plogins.com/plogins-answers-pro/docs/)
+
 == Installation ==
 
 1. Upload the plugin to `/wp-content/plugins/respondo`, or install via Plugins > Add New.
