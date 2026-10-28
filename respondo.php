@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name:       Respondo - Product Q&A for WooCommerce
- * Plugin URI:        https://plogins.com/plogins-answers/
+ * Plugin URI:        https://plogins.com/respondo/
  * Description:        Add per-product FAQs as an accessible accordion to reduce pre-sale questions.
- * Version:           1.1.3
+ * Version:           1.1.4
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Requires Plugins:  woocommerce
@@ -25,7 +25,7 @@ namespace Answers;
 
 defined('ABSPATH') || exit;
 
-const VERSION     = '1.1.3';
+const VERSION     = '1.1.4';
 const PLUGIN_FILE = __FILE__;
 
 define('ANSWERS_DIR', plugin_dir_path(__FILE__));
