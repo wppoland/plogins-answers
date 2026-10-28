@@ -4,7 +4,7 @@ Tags: woocommerce, faq, product faq, accordion
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -29,14 +29,14 @@ and the styling follows the visitor's light or dark colour scheme. The enhanceme
 script is required to open a panel; the answer text is present in the page source
 but not reachable to a visitor with JavaScript disabled.
 
-Source code and bug reports live on GitHub: [github.com/wppoland/plogins-answers](https://github.com/wppoland/plogins-answers)
+Source code and bug reports live on GitHub: [github.com/wppoland/respondo](https://github.com/wppoland/respondo)
 
 = Documentation and links =
 
-* **Documentation**: [plogins.com/plogins-answers/docs/](https://plogins.com/plogins-answers/docs/)
-* **Plugin page**: [plogins.com/plogins-answers/](https://plogins.com/plogins-answers/)
-* **Source code**: [github.com/wppoland/plogins-answers](https://github.com/wppoland/plogins-answers)
-* **Bug reports and feature requests**: [github.com/wppoland/plogins-answers/issues](https://github.com/wppoland/plogins-answers/issues)
+* **Documentation**: [plogins.com/respondo/docs/](https://plogins.com/respondo/docs/)
+* **Plugin page**: [plogins.com/respondo/](https://plogins.com/respondo/)
+* **Source code**: [github.com/wppoland/respondo](https://github.com/wppoland/respondo)
+* **Bug reports and feature requests**: [github.com/wppoland/respondo/issues](https://github.com/wppoland/respondo/issues)
 
 
 = Features =
@@ -71,9 +71,9 @@ Respondo Pro adds:
 
 The free edition is not a trial and its features stay available without a time limit.
 
-* **Respondo Pro** - [plogins.com/plogins-answers-pro/](https://plogins.com/plogins-answers-pro/)
-* **Compare editions and pricing** - [plogins.com/plogins-answers-pro/pricing/](https://plogins.com/plogins-answers-pro/pricing/)
-* **PRO documentation** - [plogins.com/plogins-answers-pro/docs/](https://plogins.com/plogins-answers-pro/docs/)
+* **Respondo Pro** - [plogins.com/respondo-pro/](https://plogins.com/respondo-pro/)
+* **Compare editions and pricing** - [plogins.com/respondo-pro/pricing/](https://plogins.com/respondo-pro/pricing/)
+* **PRO documentation** - [plogins.com/respondo-pro/docs/](https://plogins.com/respondo-pro/docs/)
 
 == Installation ==
 
@@ -130,6 +130,9 @@ in `answers_db_version`). Nothing is sent off-site, and the plugin sends no emai
 Respondo is fully translatable and ships the `respondo.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.4 =
+* Links point at the new plogins.com address and the renamed GitHub repository.
 
 = 1.1.3 =
 * The upgrade notice's "Coming soon" and "Get notified" labels are English source strings for every language; Polish sites used to get their own Polish source text, which translators in other languages then saw untranslated.

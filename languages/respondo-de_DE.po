@@ -22,8 +22,8 @@ msgstr "Respondo - Produkt-FAQs für WooCommerce"
 
 #. Plugin URI of the plugin
 #: respondo.php
-msgid "https://plogins.com/plogins-answers/"
-msgstr "https://plogins.com/plogins-answers/"
+msgid "https://plogins.com/respondo/"
+msgstr "https://plogins.com/respondo/"
 
 #. Description of the plugin
 #: respondo.php
