@@ -4,7 +4,7 @@ Tags: woocommerce, faq, product faq, accordion
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -130,6 +130,9 @@ in `answers_db_version`). Nothing is sent off-site, and the plugin sends no emai
 Respondo is fully translatable and ships the `respondo.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.5 =
+* Fixed: deleting the plugin on a multisite network now removes its settings from every site, not only the main one.
 
 = 1.1.4 =
 * Links point at the new plogins.com address and the renamed GitHub repository.
